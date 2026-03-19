@@ -1,0 +1,2008 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bao To Me — Pan Asian Kitchen, Koramangala Bangalore</title>
+  <meta name="description" content="Bao To Me is Bangalore's Pan Asian Kitchen — handcrafted baozi, gyozas, ramen, and more. Born from family recipes. Built for Bangalore. 37, CNA Arcade, Koramangala.">
+  <meta name="keywords" content="Bao To Me, Pan Asian, Bangalore, Koramangala, baozi, gyoza, dimsum, ramen, restaurant">
+
+  <!-- Schema.org structured data -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Restaurant",
+    "name": "Bao To Me",
+    "description": "Pan Asian Kitchen in Bangalore — handcrafted baozi, gyozas, dimsum and more. Where heritage meets heart.",
+    "url": "https://baotome.in",
+    "telephone": "+917019565453",
+    "servesCuisine": ["Chinese", "Japanese", "Pan-Asian", "Southeast Asian"],
+    "priceRange": "₹₹",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "37, 2nd floor, CNA Arcade, 1st Main road, 1st Block",
+      "addressLocality": "Koramangala",
+      "addressRegion": "Bangalore",
+      "postalCode": "560034",
+      "addressCountry": "IN"
+    },
+    "openingHoursSpecification": [
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "12:00",
+        "closes": "15:00"
+      },
+      {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": ["Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+        "opens": "19:00",
+        "closes": "23:00"
+      }
+    ],
+    "sameAs": ["https://www.instagram.com/baotomeblr"]
+  }
+  </script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600;700&family=Nunito:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --red: #C92A37;
+      --red-dark: #a02030;
+      --cream: #FFF3E3;
+      --black: #0d0d0d;
+      --white: #FFFFFF;
+      --grey-light: #f5ede0;
+      --grey-mid: #e8ddd0;
+      --font-serif: 'Laila', Georgia, serif;
+      --font-sans: 'Nunito', Arial, sans-serif;
+      --grid-color: rgba(201,42,55,0.08);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Nunito', sans-serif;
+      background: var(--cream);
+      color: var(--black);
+      overflow-x: hidden;
+    }
+
+    /* ── GRID BACKGROUND UTILITY ── */
+    .grid-bg {
+      background-image:
+        linear-gradient(var(--grid-color) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 5vw;
+      height: 70px;
+      background: var(--cream);
+      border-bottom: 2px solid var(--black);
+      transition: background 0.3s;
+    }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .nav-logo img { width: 44px; height: 44px; object-fit: contain; }
+
+    .nav-brand {
+      font-family: 'Laila', serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--black);
+      line-height: 1.1;
+      letter-spacing: -0.01em;
+    }
+
+    .nav-brand span { color: var(--red); display: block; font-size: 0.7rem; font-family: 'Nunito', sans-serif; font-weight: 600; letter-spacing: 0.12em; text-transform: uppercase; }
+
+    .nav-links {
+      display: flex;
+      list-style: none;
+      gap: 2.5rem;
+      align-items: center;
+    }
+
+    .nav-links a {
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: var(--black);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .nav-links a:hover, .nav-links a.active { color: var(--red); }
+
+    .nav-cta {
+      background: var(--red) !important;
+      color: var(--white) !important;
+      padding: 0.55em 1.4em;
+      border-radius: 3px;
+      transition: background 0.2s !important;
+    }
+
+    .nav-cta:hover { background: var(--red-dark) !important; color: var(--white) !important; }
+
+    /* ── HERO ── */
+    #hero {
+      margin-top: 70px;
+      min-height: calc(100dvh - 70px);
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+
+    .hero-left {
+      background: var(--cream);
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 6vw 5vw 6vw 8vw;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-left::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(var(--grid-color) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-color) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    .hero-eyebrow {
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 1rem;
+      position: relative;
+    }
+
+    .hero-heading {
+      font-family: 'Laila', serif;
+      font-size: clamp(3.2rem, 6.5vw, 7rem);
+      font-weight: 700;
+      line-height: 0.95;
+      color: var(--black);
+      position: relative;
+      margin-bottom: 1.5rem;
+    }
+
+    .hero-heading .red { color: var(--red); }
+
+    .hero-subline {
+      font-family: 'Nunito', sans-serif;
+      font-size: 1rem;
+      font-weight: 400;
+      line-height: 1.65;
+      color: var(--black);
+      opacity: 0.75;
+      max-width: 420px;
+      position: relative;
+      margin-bottom: 2.5rem;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 1rem;
+      position: relative;
+    }
+
+    .btn-primary {
+      background: var(--red);
+      color: var(--white);
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.85em 2em;
+      border: 2px solid var(--red);
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.2s, color 0.2s;
+      cursor: pointer;
+    }
+
+    .btn-primary:hover { background: var(--red-dark); border-color: var(--red-dark); }
+
+    .btn-outline {
+      background: transparent;
+      color: var(--black);
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.85em 2em;
+      border: 2px solid var(--black);
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.2s, color 0.2s;
+      cursor: pointer;
+    }
+
+    .btn-outline:hover { background: var(--black); color: var(--white); }
+
+    .hero-right {
+      background: var(--red);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4vw;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-right::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    .hero-logo-wrap {
+      position: relative;
+      z-index: 1;
+      animation: float 5s ease-in-out infinite;
+    }
+
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-18px); }
+    }
+
+    .cloud-deco {
+      position: absolute;
+      opacity: 0.22;
+    }
+
+    .cloud-deco-1 { top: 8%; left: 5%; width: 120px; }
+    .cloud-deco-2 { bottom: 12%; right: 6%; width: 90px; }
+    .cloud-deco-3 { top: 55%; left: 3%; width: 70px; }
+
+    .hero-tagline-strip {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: var(--black);
+      padding: 12px 0;
+      overflow: hidden;
+    }
+
+    .marquee-track {
+      display: flex;
+      gap: 0;
+      animation: marquee 20s linear infinite;
+      white-space: nowrap;
+    }
+
+    .marquee-track span {
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--white);
+      padding: 0 2.5rem;
+    }
+
+    .marquee-track span.dot {
+      color: var(--red);
+      padding: 0;
+      font-size: 1rem;
+    }
+
+    @keyframes marquee {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+
+    /* ── STORY SECTION ── */
+    #story {
+      background: var(--cream);
+      padding: 8rem 8vw 6rem;
+      position: relative;
+    }
+
+    .section-label {
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 0.8rem;
+    }
+
+    .section-heading {
+      font-family: 'Laila', serif;
+      font-size: clamp(2.5rem, 5vw, 5rem);
+      font-weight: 700;
+      line-height: 1.05;
+      color: var(--black);
+      margin-bottom: 2rem;
+    }
+
+    .story-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: start;
+    }
+
+    .story-text p {
+      font-size: 1rem;
+      line-height: 1.8;
+      color: var(--black);
+      opacity: 0.8;
+      margin-bottom: 1.2rem;
+    }
+
+    .story-text p strong {
+      color: var(--red);
+      font-weight: 700;
+      opacity: 1;
+    }
+
+    .story-callout {
+      background: var(--red);
+      color: var(--white);
+      padding: 3rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .story-callout::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    .story-callout-text {
+      font-family: 'Laila', serif;
+      font-size: 2.2rem;
+      font-weight: 600;
+      line-height: 1.2;
+      color: var(--white);
+      position: relative;
+      margin-bottom: 1.5rem;
+    }
+
+    .story-callout-sub {
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.9rem;
+      line-height: 1.7;
+      color: rgba(255,255,255,0.85);
+      position: relative;
+    }
+
+    .story-cloud-accent {
+      position: absolute;
+      bottom: -10px;
+      right: -10px;
+      opacity: 0.15;
+      width: 200px;
+    }
+
+    /* ── LET'S EAT BAND ── */
+    #lets-eat {
+      background: var(--black);
+      padding: 7rem 8vw;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #lets-eat::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(201,42,55,0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(201,42,55,0.06) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    .lets-eat-heading {
+      font-family: 'Laila', serif;
+      font-size: clamp(4rem, 9vw, 10rem);
+      font-weight: 700;
+      color: var(--white);
+      line-height: 0.9;
+      position: relative;
+      margin-bottom: 1.5rem;
+    }
+
+    .lets-eat-heading .red { color: var(--red); }
+
+    .lets-eat-sub {
+      font-family: 'Nunito', sans-serif;
+      font-size: 1rem;
+      color: rgba(255,255,255,0.6);
+      letter-spacing: 0.05em;
+      position: relative;
+      margin-bottom: 3rem;
+    }
+
+    .lets-eat-actions {
+      display: flex;
+      gap: 1.2rem;
+      justify-content: center;
+      position: relative;
+    }
+
+    .btn-white {
+      background: var(--white);
+      color: var(--black);
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.9em 2.2em;
+      border: 2px solid var(--white);
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .btn-white:hover { background: var(--red); border-color: var(--red); color: var(--white); }
+
+    .btn-red-outline {
+      background: transparent;
+      color: var(--red);
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.8rem;
+      font-weight: 800;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.9em 2.2em;
+      border: 2px solid var(--red);
+      text-decoration: none;
+      display: inline-block;
+      transition: background 0.2s, color 0.2s;
+    }
+
+    .btn-red-outline:hover { background: var(--red); color: var(--white); }
+
+    /* ── MENU SECTION ── */
+    #menu {
+      background: var(--cream);
+      padding: 7rem 6vw;
+    }
+
+    .menu-header {
+      text-align: center;
+      margin-bottom: 4rem;
+    }
+
+    .menu-tabs {
+      display: flex;
+      gap: 0.5rem;
+      justify-content: center;
+      flex-wrap: wrap;
+      margin-bottom: 4rem;
+    }
+
+    .menu-tab {
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.6em 1.4em;
+      border: 2px solid var(--black);
+      background: transparent;
+      color: var(--black);
+      cursor: pointer;
+      transition: all 0.2s;
+    }
+
+    .menu-tab:hover, .menu-tab.active {
+      background: var(--red);
+      border-color: var(--red);
+      color: var(--white);
+    }
+
+    .menu-panel { display: none; }
+    .menu-panel.active { display: block; }
+
+    /* Red section header */
+    .menu-cat-header {
+      background: var(--red);
+      color: var(--white);
+      text-align: center;
+      padding: 2.5rem;
+      margin-bottom: 2rem;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .menu-cat-header::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    .menu-cat-title {
+      font-family: 'Laila', serif;
+      font-size: 3rem;
+      font-weight: 700;
+      color: var(--white);
+      position: relative;
+      letter-spacing: 0.05em;
+    }
+
+    .menu-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 0;
+      border: 2px solid var(--black);
+    }
+
+    .menu-item {
+      padding: 2rem;
+      border-right: 2px solid var(--black);
+      border-bottom: 2px solid var(--black);
+      background: var(--cream);
+      position: relative;
+      transition: background 0.2s;
+    }
+
+    .menu-item:hover { background: var(--white); }
+
+    .menu-item-flags {
+      display: flex;
+      gap: 6px;
+      margin-bottom: 0.8rem;
+    }
+
+    .flag {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .flag-veg { background: #3a8c45; }
+    .flag-nonveg { background: var(--red); }
+    .flag-pork { background: #e07a30; }
+    .flag-egg { background: #f0cc60; border: 1px solid #ccc; }
+    .flag-spicy { background: var(--red); clip-path: polygon(50% 0%,61% 35%,98% 35%,68% 57%,79% 91%,50% 70%,21% 91%,32% 57%,2% 35%,39% 35%); }
+
+    .menu-item-name {
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 0.6rem;
+      line-height: 1.3;
+    }
+
+    .menu-item-desc {
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.82rem;
+      line-height: 1.65;
+      color: var(--black);
+      opacity: 0.7;
+      margin-bottom: 1rem;
+    }
+
+    .menu-item-price {
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      color: var(--black);
+    }
+
+    .menu-item-price .extra {
+      font-size: 0.75rem;
+      font-weight: 400;
+      opacity: 0.6;
+      display: block;
+      margin-top: 2px;
+    }
+
+    /* ── SPACE SECTION ── */
+    #space {
+      background: var(--black);
+      padding: 7rem 6vw;
+      position: relative;
+      overflow: hidden;
+    }
+
+    #space::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(201,42,55,0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(201,42,55,0.06) 1px, transparent 1px);
+      background-size: 40px 40px;
+    }
+
+    #space .section-label { color: var(--red); }
+    #space .section-heading { color: var(--cream); margin-bottom: 1.5rem; }
+
+    .space-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: start;
+    }
+
+    .space-text p {
+      font-size: 1rem;
+      line-height: 1.85;
+      color: rgba(255,243,227,0.6);
+      margin-bottom: 1.25rem;
+    }
+
+    .space-photos {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+    }
+
+    .space-img {
+      width: 100%;
+      object-fit: cover;
+      border-radius: 2px;
+      display: block;
+      background: #1a1a1a;
+    }
+
+    .space-text { position: sticky; top: 90px; }
+    .space-img-main { width: 100%; max-height: 70vh; object-fit: cover; object-position: center 25%; }
+
+    .space-img-pair {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 8px;
+    }
+
+    .space-img-pair .space-img { height: 200px; }
+
+    /* ── MARQUEE STRIP ── */
+    .marquee-strip {
+      background: var(--red);
+      padding: 14px 0;
+      overflow: hidden;
+    }
+
+    .marquee-strip .marquee-track span {
+      color: var(--white);
+    }
+
+    .marquee-strip .marquee-track span.dot {
+      color: var(--black);
+    }
+
+    /* ── CONTACT SECTION ── */
+    #contact {
+      background: var(--cream);
+      padding: 7rem 8vw;
+    }
+
+    .contact-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .contact-brand .section-heading {
+      font-size: 3rem;
+    }
+
+    .contact-brand p {
+      font-size: 0.9rem;
+      line-height: 1.7;
+      opacity: 0.7;
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .contact-col h4 {
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 1.2rem;
+    }
+
+    .contact-col p, .contact-col a {
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.92rem;
+      line-height: 1.8;
+      color: var(--black);
+      opacity: 0.75;
+      text-decoration: none;
+      display: block;
+    }
+
+    .contact-col a:hover { color: var(--red); opacity: 1; }
+
+    .contact-phone {
+      font-family: 'Laila', serif !important;
+      font-size: 1.6rem !important;
+      font-weight: 700 !important;
+      color: var(--red) !important;
+      opacity: 1 !important;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--black);
+      color: rgba(255,255,255,0.4);
+      text-align: center;
+      padding: 2rem;
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+    }
+
+    footer span { color: var(--red); }
+
+    /* ── SCROLLING REVEAL ── */
+    .reveal {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* ── MOBILE BOTTOM NAV ── */
+    .mobile-bottom-nav {
+      display: none;
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 200;
+      background: var(--cream);
+      border-top: 2px solid var(--black);
+      padding-bottom: env(safe-area-inset-bottom, 0px);
+    }
+
+    .mobile-nav-item {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 3px;
+      text-decoration: none;
+      color: var(--black);
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.6rem;
+      font-weight: 800;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 10px 4px;
+      min-height: 56px;
+      transition: color 0.2s;
+    }
+
+    .mobile-nav-item svg { width: 20px; height: 20px; flex-shrink: 0; }
+    .mobile-nav-item:hover, .mobile-nav-item.active { color: var(--red); }
+
+    .mobile-nav-reserve {
+      background: var(--red);
+      color: var(--white);
+      flex: 1.4;
+    }
+
+    .mobile-nav-reserve:hover { background: var(--red-dark); color: var(--white); }
+    .mobile-nav-reserve.active { background: var(--red-dark); color: var(--white); }
+
+    @media (max-width: 900px) {
+      .mobile-bottom-nav { display: flex; }
+      body { padding-bottom: calc(56px + env(safe-area-inset-bottom, 0px)); }
+    }
+
+    /* ── REDUCED MOTION ── */
+    @media (prefers-reduced-motion: reduce) {
+      .hero-logo-wrap { animation: none; }
+      .marquee-track { animation: none; }
+      .reveal { transition: none; }
+    }
+
+    /* ── SKIP LINK ── */
+    .skip-link {
+      position: absolute;
+      top: -100%;
+      left: 1rem;
+      z-index: 9999;
+      background: var(--black);
+      color: var(--white);
+      padding: 0.5rem 1.2rem;
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-decoration: none;
+      border: 2px solid var(--white);
+      transition: top 0.2s;
+    }
+
+    .skip-link:focus { top: 1rem; }
+
+    /* ── RESERVATION MODAL ── */
+    .reserve-modal {
+      position: fixed;
+      inset: 0;
+      z-index: 1000;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .reserve-modal[hidden] { display: none; }
+    .reserve-modal-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(13,13,13,0.7);
+      cursor: pointer;
+    }
+    .reserve-modal-content {
+      position: relative;
+      z-index: 1;
+      background: var(--cream);
+      border: 2px solid var(--black);
+      width: 100%;
+      max-width: 720px;
+      height: 92vh;
+      max-height: 92vh;
+      display: flex;
+      flex-direction: column;
+      overflow: hidden;
+    }
+    .reserve-modal-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 1.5rem;
+      border-bottom: 2px solid var(--black);
+      background: var(--black);
+      flex-shrink: 0;
+    }
+    .reserve-modal-title {
+      font-family: 'Laila', serif;
+      font-size: 1.2rem;
+      font-weight: 700;
+      color: var(--white);
+      letter-spacing: 0.02em;
+    }
+    .reserve-modal-close {
+      background: transparent;
+      border: 2px solid rgba(255,255,255,0.3);
+      cursor: pointer;
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 44px;
+      min-height: 44px;
+      transition: border-color 0.2s;
+    }
+    .reserve-modal-close:hover { border-color: var(--white); }
+    .reserve-modal-close svg { width: 18px; height: 18px; }
+    .reserve-modal-iframe {
+      width: 100%;
+      flex: 1;
+      border: none;
+      min-height: 0;
+    }
+    .reserve-modal-fallback {
+      padding: 0.65rem 1.5rem;
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.78rem;
+      opacity: 0.55;
+      border-top: 1px solid rgba(0,0,0,0.1);
+      text-align: center;
+      flex-shrink: 0;
+    }
+    .reserve-modal-fallback a { color: var(--red); }
+    .reserve-modal-wa {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      padding: 1rem 1.5rem;
+      padding-bottom: calc(1rem + env(safe-area-inset-bottom, 0px));
+      border-top: 2px solid var(--black);
+      font-family: 'Nunito', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.05em;
+      background: var(--cream);
+      flex-shrink: 0;
+    }
+    .reserve-modal-wa a {
+      color: var(--black);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color 0.2s;
+    }
+    .reserve-modal-wa a:hover { color: var(--red); }
+
+    /* ── REVIEWS SECTION ── */
+    #reviews {
+      background: var(--cream);
+      padding: 6rem 8vw;
+    }
+    .reviews-tabs {
+      display: flex;
+      margin: 1.5rem 0 2rem;
+      border: 2px solid var(--black);
+      width: fit-content;
+    }
+    .reviews-tab {
+      padding: 0.6em 1.8em;
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      background: transparent;
+      color: var(--black);
+      border: none;
+      cursor: pointer;
+      min-height: 44px;
+      transition: background 0.18s, color 0.18s;
+    }
+    .reviews-tab[aria-selected="true"] {
+      background: var(--black);
+      color: var(--white);
+    }
+    .reviews-tab:hover:not([aria-selected="true"]) {
+      background: var(--grey-mid);
+    }
+    .reviews-rating {
+      display: flex;
+      align-items: center;
+      gap: 1.2rem;
+      background: var(--white);
+      border: 1.5px solid var(--grey-mid);
+      padding: 1rem 1.2rem;
+      margin-bottom: 1.5rem;
+    }
+    .rating-score {
+      font-family: var(--font-serif);
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: var(--red);
+      line-height: 1;
+      font-variant-numeric: tabular-nums;
+    }
+    .rating-info { flex: 1; }
+    .rating-platform {
+      font-family: var(--font-sans);
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(13,13,13,0.45);
+      margin-bottom: 2px;
+    }
+    .rating-stars { font-size: 1.05rem; color: var(--red); letter-spacing: 2px; margin-bottom: 2px; }
+    .rating-count { font-family: var(--font-sans); font-size: 0.75rem; color: rgba(13,13,13,0.45); }
+    .reviews-panel { display: none; }
+    .reviews-panel.active { display: block; }
+    .reviews-carousel-wrap { position: relative; }
+    .reviews-carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+      background: var(--white);
+      border: 1.5px solid var(--grey-mid);
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s;
+      flex-shrink: 0;
+    }
+    .reviews-carousel-btn:hover { background: var(--black); color: var(--white); border-color: var(--black); }
+    .reviews-carousel-btn.prev { left: -22px; }
+    .reviews-carousel-btn.next { right: -22px; }
+    @media (max-width: 600px) {
+      .reviews-carousel-btn.prev { left: 0; }
+      .reviews-carousel-btn.next { right: 0; }
+    }
+    .reviews-grid {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 0.5rem;
+      scrollbar-width: none;
+    }
+    .reviews-grid::-webkit-scrollbar { display: none; }
+    .review-card {
+      background: var(--white);
+      border: 1.5px solid var(--grey-mid);
+      padding: 1.4rem;
+      flex: 0 0 300px;
+      scroll-snap-align: start;
+    }
+    @media (min-width: 768px) { .review-card { flex: 0 0 340px; } }
+    .review-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      margin-bottom: 0.5rem;
+    }
+    .review-name { font-family: var(--font-sans); font-size: 0.82rem; font-weight: 700; }
+    .review-source {
+      font-family: var(--font-sans);
+      font-size: 0.6rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: rgba(13,13,13,0.38);
+    }
+    .review-stars { font-size: 0.88rem; color: var(--red); letter-spacing: 2px; margin-bottom: 0.6rem; }
+    .review-text {
+      font-family: var(--font-sans);
+      font-size: 0.88rem;
+      line-height: 1.72;
+      color: rgba(13,13,13,0.7);
+      font-style: italic;
+    }
+    .reviews-links {
+      display: flex;
+      gap: 0.75rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+    .btn-link-outline {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      border: 2px solid var(--black);
+      color: var(--black);
+      font-family: var(--font-sans);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.6em 1.4em;
+      min-height: 44px;
+      cursor: pointer;
+      transition: background 0.2s, color 0.2s;
+    }
+    .btn-link-outline:hover { background: var(--black); color: var(--white); }
+    .btn-link-outline.red { border-color: var(--red); color: var(--red); }
+    .btn-link-outline.red:hover { background: var(--red); color: var(--white); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 900px) {
+      #hero { grid-template-columns: 1fr; }
+      .hero-right { min-height: 55vw; }
+      .story-grid { grid-template-columns: 1fr; gap: 3rem; }
+      .contact-inner { grid-template-columns: 1fr; gap: 2.5rem; }
+      .nav-links { display: none; }
+    }
+
+    @media (max-width: 600px) {
+      .space-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+      .space-img-pair .space-img { height: 160px; }
+      .menu-grid { grid-template-columns: 1fr; }
+      .hero-heading { font-size: 3rem; }
+      .lets-eat-heading { font-size: 4rem; }
+
+      /* Modal goes full-screen on mobile */
+      .reserve-modal { padding: 0; align-items: flex-end; }
+      .reserve-modal-content {
+        max-width: 100%;
+        height: calc(96dvh - env(safe-area-inset-top, 0px));
+        max-height: calc(96dvh - env(safe-area-inset-top, 0px));
+        border-left: none;
+        border-right: none;
+        border-bottom: none;
+      }
+    }
+  </style>
+</head>
+<body>
+<a href="#hero" class="skip-link">Skip to main content</a>
+
+<!-- ══ NAV ══ -->
+<nav aria-label="Main navigation">
+  <a class="nav-logo" href="#hero">
+    <img src="context/logo/Bao To Me Logo without tagline.png" alt="Bao To Me logo">
+    <div class="nav-brand">
+      Bao To Me
+      <span>Pan Asian Kitchen</span>
+    </div>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#story">Our Story</a></li>
+    <li><a href="#menu">Menu</a></li>
+    <li><a href="#space">Our Space</a></li>
+    <li><button class="nav-cta" onclick="openReserveModal()" style="font-family:'Nunito',sans-serif;font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:0.1em;border:none;cursor:pointer;">Reserve a Table</button></li>
+  </ul>
+</nav>
+
+<!-- ══ HERO ══ -->
+<section id="hero">
+  <div class="hero-left">
+    <p class="hero-eyebrow">Bangalore's Pan Asian Kitchen</p>
+    <h1 class="hero-heading">
+      Just a-<span class="red">bao</span> the<br>
+      best buns<br>
+      in town.
+    </h1>
+    <p class="hero-subline">
+      Handcrafted baozi, gyozas, and pan-Asian soul food — born from family recipes, built for Bangalore.
+    </p>
+    <div class="hero-actions">
+      <button class="btn-primary" onclick="openReserveModal()" style="font-family:'Nunito',sans-serif;font-size:0.8rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;border:2px solid var(--red);cursor:pointer;">Book a Table</button>
+      <a href="#menu" class="btn-outline">View Menu</a>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <!-- Floating cloud decorations -->
+    <svg class="cloud-deco cloud-deco-1" viewBox="0 0 200 130" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10,100 Q10,60 40,55 Q35,20 70,20 Q85,5 105,20 Q125,5 145,25 Q175,20 185,50 Q200,55 195,80 Q195,105 170,105 L30,105 Q10,105 10,100Z" fill="white"/>
+      <path d="M10,100 Q10,60 40,55 Q35,20 70,20 Q85,5 105,20 Q125,5 145,25 Q175,20 185,50 Q200,55 195,80 Q195,105 170,105 L30,105 Q10,105 10,100Z" fill="none" stroke="white" stroke-width="0"/>
+      <!-- Wave pattern inside cloud -->
+      <clipPath id="c1"><path d="M10,100 Q10,60 40,55 Q35,20 70,20 Q85,5 105,20 Q125,5 145,25 Q175,20 185,50 Q200,55 195,80 Q195,105 170,105 L30,105 Q10,105 10,100Z"/></clipPath>
+      <g clip-path="url(#c1)">
+        <g fill="none" stroke="white" stroke-width="1.5" opacity="0.5">
+          <path d="M0,110 Q10,95 20,110 Q30,95 40,110 Q50,95 60,110 Q70,95 80,110 Q90,95 100,110 Q110,95 120,110 Q130,95 140,110 Q150,95 160,110 Q170,95 180,110 Q190,95 200,110"/>
+          <path d="M0,95 Q10,80 20,95 Q30,80 40,95 Q50,80 60,95 Q70,80 80,95 Q90,80 100,95 Q110,80 120,95 Q130,80 140,95 Q150,80 160,95 Q170,80 180,95 Q190,80 200,95"/>
+          <path d="M0,80 Q10,65 20,80 Q30,65 40,80 Q50,65 60,80 Q70,65 80,80 Q90,65 100,80 Q110,65 120,80 Q130,65 140,80 Q150,65 160,80 Q170,65 180,80 Q190,65 200,80"/>
+          <path d="M0,65 Q10,50 20,65 Q30,50 40,65 Q50,50 60,65 Q70,50 80,65 Q90,50 100,65 Q110,50 120,65 Q130,50 140,65 Q150,50 160,65 Q170,50 180,65 Q190,50 200,65"/>
+          <path d="M0,50 Q10,35 20,50 Q30,35 40,50 Q50,35 60,50 Q70,35 80,50 Q90,35 100,50 Q110,35 120,50 Q130,35 140,50 Q150,35 160,50 Q170,35 180,50 Q190,35 200,50"/>
+          <path d="M0,35 Q10,20 20,35 Q30,20 40,35 Q50,20 60,35 Q70,20 80,35 Q90,20 100,35 Q110,20 120,35 Q130,20 140,35 Q150,20 160,35 Q170,20 180,35 Q190,20 200,35"/>
+        </g>
+      </g>
+    </svg>
+
+    <!-- Main logo -->
+    <div class="hero-logo-wrap">
+      <img src="context/logo/Bao To Me Logo without tagline.png" alt="Bao To Me logo" width="320" height="320" style="object-fit:contain;">
+    </div>
+
+    <svg class="cloud-deco cloud-deco-2" viewBox="0 0 200 130" xmlns="http://www.w3.org/2000/svg">
+      <path d="M10,100 Q10,60 40,55 Q35,20 70,20 Q85,5 105,20 Q125,5 145,25 Q175,20 185,50 Q200,55 195,80 Q195,105 170,105 L30,105 Q10,105 10,100Z" fill="white"/>
+      <clipPath id="c2"><path d="M10,100 Q10,60 40,55 Q35,20 70,20 Q85,5 105,20 Q125,5 145,25 Q175,20 185,50 Q200,55 195,80 Q195,105 170,105 L30,105 Q10,105 10,100Z"/></clipPath>
+      <g clip-path="url(#c2)">
+        <g fill="none" stroke="white" stroke-width="1.5" opacity="0.5">
+          <path d="M0,110 Q10,95 20,110 Q30,95 40,110 Q50,95 60,110 Q70,95 80,110 Q90,95 100,110 Q110,95 120,110 Q130,95 140,110 Q150,95 160,110 Q170,95 180,110 Q190,95 200,110"/>
+          <path d="M0,95 Q10,80 20,95 Q30,80 40,95 Q50,80 60,95 Q70,80 80,95 Q90,80 100,95 Q110,80 120,95 Q130,80 140,95 Q150,80 160,95 Q170,80 180,95 Q190,80 200,95"/>
+          <path d="M0,80 Q10,65 20,80 Q30,65 40,80 Q50,65 60,80 Q70,65 80,80 Q90,65 100,80 Q110,65 120,80 Q130,65 140,80 Q170,65 180,80 Q190,65 200,80"/>
+          <path d="M0,65 Q10,50 20,65 Q30,50 40,65 Q50,50 60,65 Q70,50 80,65 Q90,50 100,65 Q110,50 120,65 Q130,50 140,65 Q150,50 160,65 Q170,50 180,65 Q190,50 200,65"/>
+        </g>
+      </g>
+    </svg>
+
+    <!-- Bottom tagline marquee inside hero-right -->
+    <div class="hero-tagline-strip">
+      <div class="marquee-track">
+        <span>Just a-bao the best buns in town</span><span class="dot">✦</span>
+        <span>Pan Asian Kitchen</span><span class="dot">✦</span>
+        <span>Koramangala, Bangalore</span><span class="dot">✦</span>
+        <span>包给我</span><span class="dot">✦</span>
+        <span>Just a-bao the best buns in town</span><span class="dot">✦</span>
+        <span>Pan Asian Kitchen</span><span class="dot">✦</span>
+        <span>Koramangala, Bangalore</span><span class="dot">✦</span>
+        <span>包给我</span><span class="dot">✦</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ STORY ══ -->
+<section id="story" class="grid-bg">
+  <div class="reveal">
+    <p class="section-label">Who We Are</p>
+    <h2 class="section-heading">The Bao<br>To Me Story.</h2>
+  </div>
+
+  <div class="story-grid reveal">
+    <div class="story-text">
+      <p><strong>Where Heritage Meets Heart.</strong> What started as a delivery only kitchen in 2021 has grown into something deeply personal: a celebration of the flavors that shaped our chef's childhood and the culinary traditions passed down through generations.</p>
+      <p>At Bao To Me, every dish tells a story. Our handcrafted baozi are born from treasured family recipes perfected by <strong>Chef Wan Ming Li</strong>: a reimagination of his father's recipe for the modern palate.</p>
+      <p>We're a tribute to the rich tapestry of Pan-Asian cuisine — from the subtle artistry of Chinese and Japanese kitchens, to the bold vibrant soul of Southeast Asian Street food.</p>
+      <p>Founded by three friends — a techie-turned-chef, a corporate foodie, and a business expert — who turned their love for food, culture, and their city into something greater than the sum of its parts.</p>
+    </div>
+
+    <div class="story-callout">
+      <p class="story-callout-text">"It's not just about the bao — it's about bringing people together."</p>
+      <p class="story-callout-sub">Our interiors mirror the vibrant energy of Southeast Asian alleyways: layered, lived-in and richly textured. Metal shutters, lightboxes, and vintage fans repurposed into lamps evoke raw authenticity and nostalgic charm.</p>
+      <p class="story-callout-sub" style="margin-top:1rem; font-weight:700; color:white;">Welcome to Bao To Me. Welcome Home.</p>
+
+      <!-- Cloud pattern decoration -->
+      <svg class="story-cloud-accent" viewBox="0 0 200 130" xmlns="http://www.w3.org/2000/svg">
+        <path d="M10,100 Q10,60 40,55 Q35,20 70,20 Q85,5 105,20 Q125,5 145,25 Q175,20 185,50 Q200,55 195,80 Q195,105 170,105 L30,105 Q10,105 10,100Z" fill="white"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<!-- ══ LET'S EAT ══ -->
+<section id="lets-eat">
+  <div class="reveal">
+    <h2 class="lets-eat-heading">Let's <span class="red">Eat.</span></h2>
+    <p class="lets-eat-sub">From dumplings to big plates — every dish is crafted with intention.</p>
+    <div class="lets-eat-actions">
+      <button class="btn-white" onclick="openReserveModal()" style="font-family:'Nunito',sans-serif;font-size:0.8rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;border:2px solid var(--white);cursor:pointer;">Book a Table</button>
+      <a href="https://wa.me/917019565453?text=Hi%20Bao%20To%20Me!%20I%27d%20like%20to%20make%20a%20reservation." class="btn-red-outline" target="_blank" rel="noopener">WhatsApp Us</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ MENU ══ -->
+<section id="menu">
+  <div class="menu-header reveal">
+    <p class="section-label">What We Serve</p>
+    <h2 class="section-heading">Our Menu</h2>
+  </div>
+
+  <div class="menu-tabs reveal" role="tablist" aria-label="Menu categories">
+    <button class="menu-tab active" role="tab" aria-selected="true" aria-controls="tab-starters" onclick="switchTab(this,'tab-starters')">Salads &amp; Soups</button>
+    <button class="menu-tab" role="tab" aria-selected="false" aria-controls="tab-appetizers" onclick="switchTab(this,'tab-appetizers')">Appetizers</button>
+    <button class="menu-tab" role="tab" aria-selected="false" aria-controls="tab-baos" onclick="switchTab(this,'tab-baos')">Baos</button>
+    <button class="menu-tab" role="tab" aria-selected="false" aria-controls="tab-mains" onclick="switchTab(this,'tab-mains')">Mains</button>
+    <button class="menu-tab" role="tab" aria-selected="false" aria-controls="tab-desserts" onclick="switchTab(this,'tab-desserts')">Desserts</button>
+    <button class="menu-tab" role="tab" aria-selected="false" aria-controls="tab-drinks" onclick="switchTab(this,'tab-drinks')">Beverages</button>
+  </div>
+
+  <!-- SALADS & SOUPS -->
+  <div id="tab-starters" class="menu-panel active" role="tabpanel">
+    <div class="menu-cat-header">
+      <h3 class="menu-cat-title">Salads &amp; Soups</h3>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <div class="menu-item-flags"><div class="flag flag-veg"></div></div>
+        <div class="menu-item-name">Smashed Cucumber Salad</div>
+        <div class="menu-item-desc">Crispy smashed cucumbers with a tangy garlic-sesame dressing, finished with fresh herbs and a hint of spice.</div>
+        <div class="menu-item-price">Rs. 335/-</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-flags"><div class="flag flag-nonveg"></div><div class="flag flag-spicy" style="background:var(--red);width:12px;height:14px;clip-path:polygon(50% 0%,100% 50%,75% 100%,25% 100%,0% 50%)"></div></div>
+        <div class="menu-item-name">Surimi Stick Salad</div>
+        <div class="menu-item-desc">A refreshing salad of tender surimi sticks, crisp cucumbers, and creamy Japanese mayo dressing, topped with sesame seeds.</div>
+        <div class="menu-item-price">Rs. 415/-</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-flags"><div class="flag flag-veg"></div></div>
+        <div class="menu-item-name">Miso Soup Veg</div>
+        <div class="menu-item-desc">A comforting broth of fermented soybean paste, with tofu, seaweed, and scallions.</div>
+        <div class="menu-item-price">Rs. 295/-</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-flags"><div class="flag flag-nonveg"></div></div>
+        <div class="menu-item-name">Tori Katsu Sando (1 pc)</div>
+        <div class="menu-item-desc">Golden, breaded chicken cutlet, drizzled with savory katsu sauce, sandwiched between pillowy, soft Japanese milk bread.</div>
+        <div class="menu-item-price">Rs. 495/-</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-flags"><div class="flag flag-nonveg"></div></div>
+        <div class="menu-item-name">Prawn Toast Mantou (2 pcs)</div>
+        <div class="menu-item-desc">Crispy fried mantou stuffed with savory prawn filling and encrusted with sesame seeds.</div>
+        <div class="menu-item-price">Rs. 545/-</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- APPETIZERS -->
+  <div id="tab-appetizers" class="menu-panel" role="tabpanel">
+    <div class="menu-cat-header">
+      <h3 class="menu-cat-title">Appetizers</h3>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <div class="menu-item-flags"><div class="flag flag-veg"></div></div>
+        <div class="menu-item-name">Veg Wonton</div>
+        <div class="menu-item-desc">Soft vegetable wontons served in a bold, spicy soy-based broth.</div>
+        <div class="menu-item-price">Rs. 425/- <span class="extra">+ Extra Wonton (1 pc) Rs.125/-</span></div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-flags"><div class="flag flag-veg"></div></div>
+        <div class="menu-item-name">Truffle Cream Cheese Dimsum (4 pcs)</div>
+        <div class="menu-item-desc">Delicate dumplings filled with rich cream cheese, medley of mushrooms and a touch of aromatic truffle oil.</div>
+        <div class="menu-item-price">Rs. 495/- <span class="extra">+ Extra Dimsum (1 pc) Rs.145/-</span></div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-flags"><div class="flag flag-veg"></div></div>
+        <div class="menu-item-name">Sichimi Spiced Lotus Stem Chips</div>
+        <div class="menu-item-desc">Crispy lotus stem chips seasoned with our in-house dry Sichimi spice mix. Served with Japanese mayo.</div>
+        <div class="menu-item-price">Rs. 415/-</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-flags"><div class="flag flag-veg"></div></div>
+        <div class="menu-item-name">Spiced Edamame</div>
+        <div class="menu-item-desc">Steamed edamame tossed in a savory blend of garlic and in-house spice mix.</div>
+        <div class="menu-item-price">Rs. 425/-</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-flags"><div class="flag flag-veg"></div></div>
+        <div class="menu-item-name">Veg Jhol Momo</div>
+        <div class="menu-item-desc">Soft, vegetable momos served in a light, gently spiced broth with comforting Himalayan flavours.</div>
+        <div class="menu-item-price">Rs. 425/- <span class="extra">+ Extra Momo (1 pc) Rs.125/-</span></div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-flags"><div class="flag flag-nonveg"></div></div>
+        <div class="menu-item-name">Chicken Jhol Momo</div>
+        <div class="menu-item-desc">Soft, juicy chicken momos served in a light, gently spiced broth with comforting Himalayan flavours.</div>
+        <div class="menu-item-price">Rs. 475/- <span class="extra">+ Extra Momo (1 pc) Rs.145/-</span></div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-flags"><div class="flag flag-nonveg"></div></div>
+        <div class="menu-item-name">Chicken &amp; Shiitake Mushroom Wonton (4 pcs)</div>
+        <div class="menu-item-desc">Tender minced chicken thigh and shiitake-filled wontons in a spicy soy broth.</div>
+        <div class="menu-item-price">Rs. 475/- <span class="extra">+ Extra Wonton (1 pc) Rs.145/-</span></div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-flags"><div class="flag flag-nonveg"></div></div>
+        <div class="menu-item-name">Tori Kara-Age</div>
+        <div class="menu-item-desc">Juicy, tender, Japanese fried chicken, marinated in soy and ginger, served with ponzu sauce and Japanese mayo.</div>
+        <div class="menu-item-price">Rs. 425/-</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-flags"><div class="flag flag-nonveg"></div></div>
+        <div class="menu-item-name">Prawn Hargao (4 pcs)</div>
+        <div class="menu-item-desc">Delicate steamed dumplings with succulent prawn and bamboo shoot filling, wrapped in translucent cover.</div>
+        <div class="menu-item-price">Rs. 495/- <span class="extra">+ Extra Hargao (1 pc) Rs.145/-</span></div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-flags"><div class="flag flag-nonveg"></div></div>
+        <div class="menu-item-name">Tori Gyozas (4 pcs)</div>
+        <div class="menu-item-desc">Japanese pan-seared pot sticker with minced chicken filling. Served with spicy chilli sauce and tangy ponzu sauce.</div>
+        <div class="menu-item-price">Rs. 415/- <span class="extra">+ Extra Gyoza (1 pc) Rs.120/-</span></div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-flags"><div class="flag flag-veg"></div></div>
+        <div class="menu-item-name">Yasai Gyozas (4 pcs)</div>
+        <div class="menu-item-desc">Japanese pan-seared pot sticker with mixed veg filling. Served with spicy chilli sauce and tangy ponzu sauce.</div>
+        <div class="menu-item-price">Rs. 375/- <span class="extra">+ Extra Gyoza (1 pc) Rs.110/-</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- BAOS -->
+  <div id="tab-baos" class="menu-panel" role="tabpanel">
+    <div class="menu-cat-header">
+      <h3 class="menu-cat-title">Baos (3 pcs)</h3>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <div class="menu-item-flags"><div class="flag flag-veg"></div></div>
+        <div class="menu-item-name">Veg Bao</div>
+        <div class="menu-item-desc">Medley of green leafy veggies, mushrooms, carrots, onions. Served with spicy chilli sauce and chilli oil.</div>
+        <div class="menu-item-price">Rs. 375/- <span class="extra">+ Extra Bao (1 pc) Rs.145/-</span></div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-flags"><div class="flag flag-veg"></div></div>
+        <div class="menu-item-name">Spicy Tofu Bao</div>
+        <div class="menu-item-desc">Aromatic chilli oil infused tofu cubes, spring onions. Served with spicy chilli sauce and chilli oil.</div>
+        <div class="menu-item-price">Rs. 415/- <span class="extra">+ Extra Bao (1 pc) Rs.160/-</span></div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-flags"><div class="flag flag-nonveg"></div></div>
+        <div class="menu-item-name">Chicken Bao</div>
+        <div class="menu-item-desc">Tender chicken thighs, onion, spring onions and sesame oil. Served with spicy chilli sauce and chilli oil.</div>
+        <div class="menu-item-price">Rs. 425/- <span class="extra">+ Extra Bao (1 pc) Rs.165/-</span></div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-flags"><div class="flag flag-nonveg"></div></div>
+        <div class="menu-item-name">Schezwan Chicken Bao</div>
+        <div class="menu-item-desc">Spicy, aromatic, in-house schezwan sauce chicken. Served with spicy chilli sauce and chilli oil.</div>
+        <div class="menu-item-price">Rs. 425/- <span class="extra">+ Extra Bao (1 pc) Rs.165/-</span></div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-flags"><div class="flag flag-pork"></div></div>
+        <div class="menu-item-name">Char Siu Bao ★</div>
+        <div class="menu-item-desc">Dad's recipe cantonese style barbecue pork-belly. Served with spicy chilli sauce and chilli oil.</div>
+        <div class="menu-item-price">Rs. 495/- <span class="extra">+ Extra Bao (1 pc) Rs.190/-</span></div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-flags"><div class="flag flag-pork"></div></div>
+        <div class="menu-item-name">Hujiao Bing</div>
+        <div class="menu-item-desc">Oven roasted Taiwanese pepper pork buns. Served with spicy chilli sauce and chilli oil.</div>
+        <div class="menu-item-price">Rs. 495/- <span class="extra">+ Extra Bao (1 pc) Rs.190/-</span></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAINS -->
+  <div id="tab-mains" class="menu-panel" role="tabpanel">
+    <div class="menu-cat-header">
+      <h3 class="menu-cat-title">Main Course</h3>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <div class="menu-item-flags"><div class="flag flag-veg"></div></div>
+        <div class="menu-item-name">Nasu Katsu Curry Rice</div>
+        <div class="menu-item-desc">Crispy panko breaded eggplant, served with rich Japanese curry and short grain rice.</div>
+        <div class="menu-item-price">Rs. 545/- <span class="extra">+ Add Nasu Katsu Rs.195</span></div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-flags"><div class="flag flag-veg"></div></div>
+        <div class="menu-item-name">Yasai Yaki Udon</div>
+        <div class="menu-item-desc">Stir-fried udon noodles with a mix of fresh vegetables, tossed in a savory soy-based sauce.</div>
+        <div class="menu-item-price">Rs. 545/- <span class="extra">+ Add Egg Rs.40</span></div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-flags"><div class="flag flag-veg"></div></div>
+        <div class="menu-item-name">Yasai Yaki Meshi ★</div>
+        <div class="menu-item-desc">Stir fried Japanese short grain rice with garlic and veggies.</div>
+        <div class="menu-item-price">Rs. 545/- <span class="extra">+ Add Egg Rs.40</span></div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-flags"><div class="flag flag-nonveg"></div></div>
+        <div class="menu-item-name">Tori Katsu Curry Rice ★</div>
+        <div class="menu-item-desc">Crispy panko breaded chicken thigh, served with rich Japanese curry and short grain rice.</div>
+        <div class="menu-item-price">Rs. 595/- <span class="extra">+ Add Tori Katsu Rs.245</span></div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-flags"><div class="flag flag-nonveg"></div></div>
+        <div class="menu-item-name">Tori Yaki Udon</div>
+        <div class="menu-item-desc">Stir-fried udon noodles with tender chicken, vibrant vegetables, and a savory soy-based sauce.</div>
+        <div class="menu-item-price">Rs. 595/-</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-flags"><div class="flag flag-nonveg"></div></div>
+        <div class="menu-item-name">Tori Yaki Meshi</div>
+        <div class="menu-item-desc">Stir fried Japanese short grain rice with tender chicken cubes, garlic and veggies.</div>
+        <div class="menu-item-price">Rs. 595/-</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-flags"><div class="flag flag-veg"></div></div>
+        <div class="menu-item-name">Yasai Itame — Veg</div>
+        <div class="menu-item-desc">Stir-fried seasonal vegetables in a savory soy garlic sauce.</div>
+        <div class="menu-item-price">Rs. 475/-</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-flags"><div class="flag flag-nonveg"></div></div>
+        <div class="menu-item-name">Schezwan Chicken</div>
+        <div class="menu-item-desc">Crispy chicken tossed in a bold, spicy Szechuan sauce with a punch of garlic, ginger, and fiery chili heat.</div>
+        <div class="menu-item-price">Rs. 495/-</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-flags"><div class="flag flag-pork"></div></div>
+        <div class="menu-item-name">Buta Kakuni ★</div>
+        <div class="menu-item-desc">Tender, braised pork belly in a savory-sweet soy sauce glaze, simmered to melt-in-your-mouth perfection.</div>
+        <div class="menu-item-price">Rs. 595/-</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-flags"><div class="flag flag-veg"></div></div>
+        <div class="menu-item-name">Gohan</div>
+        <div class="menu-item-desc">Steamed Japanese rice. The perfect accompaniment.</div>
+        <div class="menu-item-price">Rs. 245/-</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DESSERTS -->
+  <div id="tab-desserts" class="menu-panel" role="tabpanel">
+    <div class="menu-cat-header">
+      <h3 class="menu-cat-title">Desserts</h3>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <div class="menu-item-flags"><div class="flag flag-veg"></div></div>
+        <div class="menu-item-name">Dou Sha Bao</div>
+        <div class="menu-item-desc">Mom's recipe chinese sweet red bean bao.</div>
+        <div class="menu-item-price">Rs. 345/-</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-flags"><div class="flag flag-egg"></div></div>
+        <div class="menu-item-name">Custard Bao</div>
+        <div class="menu-item-desc">Home-made thick, rich, sweet custard bao.</div>
+        <div class="menu-item-price">Rs. 345/-</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-flags"><div class="flag flag-veg"></div></div>
+        <div class="menu-item-name">Black Sesame Bao ★</div>
+        <div class="menu-item-desc">Rich, fragrant and nutty, black sesame paste with just the right amount of sweetness.</div>
+        <div class="menu-item-price">Rs. 345/-</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-flags"><div class="flag flag-veg"></div></div>
+        <div class="menu-item-name">Mizu Shingen Mochi ★</div>
+        <div class="menu-item-desc">A delicate, raindrop-shaped dessert made from mineral water and agar, served with roasted soybean flour and black sugar syrup.</div>
+        <div class="menu-item-price">Rs. 375/-</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-flags"><div class="flag flag-egg"></div></div>
+        <div class="menu-item-name">Japanese Cheesecake ★</div>
+        <div class="menu-item-desc">A feather-light soufflé cheesecake with delicate cream cheese notes and served with berry cream.</div>
+        <div class="menu-item-price">Rs. 375/-</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-flags"><div class="flag flag-egg"></div></div>
+        <div class="menu-item-name">Matcha Crème Brûlée ★</div>
+        <div class="menu-item-desc">Silky matcha custard with a crisp caramelised sugar crust.</div>
+        <div class="menu-item-price">Rs. 375/-</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-flags"><div class="flag flag-egg"></div></div>
+        <div class="menu-item-name">Dessert Bao Basket</div>
+        <div class="menu-item-desc">A steamed basket of one each of our three house-favourite dessert baos.</div>
+        <div class="menu-item-price">Rs. 495/-</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- DRINKS -->
+  <div id="tab-drinks" class="menu-panel" role="tabpanel">
+    <div class="menu-cat-header">
+      <h3 class="menu-cat-title">Beverages</h3>
+    </div>
+    <div class="menu-grid">
+      <div class="menu-item">
+        <div class="menu-item-name">Lemon Ice Tea</div>
+        <div class="menu-item-desc">Refreshingly cold iced tea with a tangy lemon flavour.</div>
+        <div class="menu-item-price">Rs. 295/-</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name">Blood Orange Kombucha</div>
+        <div class="menu-item-desc">Citrusy and bold with a hint of berry. Blood orange extract and natural fizz, packed with probiotics.</div>
+        <div class="menu-item-price">Rs. 315/-</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name">Cola Kombucha</div>
+        <div class="menu-item-desc">A nostalgic twist on a classic. Cola-spiced, lightly fizzy, and brewed with gut-friendly probiotics.</div>
+        <div class="menu-item-price">Rs. 315/-</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name">Litchi Kombucha</div>
+        <div class="menu-item-desc">Bright and bubbly, this probiotic-rich tea blends delicate litchi sweetness with a crisp finish.</div>
+        <div class="menu-item-price">Rs. 315/-</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name">Passion Fruit Kombucha</div>
+        <div class="menu-item-desc">Bold and fruity with a tangy twist. Made with passionfruit extract and packed with natural probiotics.</div>
+        <div class="menu-item-price">Rs. 315/-</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name">Mango Kombucha</div>
+        <div class="menu-item-desc">Tropical, tangy, and lightly sparkling. Mango extract, natural fizz, and gut-friendly probiotics.</div>
+        <div class="menu-item-price">Rs. 315/-</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-name">Jasmine Tea Pot (Serves 3–4)</div>
+        <div class="menu-item-desc">Fragrant jasmine-infused tea served hot, light, and soothing.</div>
+        <div class="menu-item-price">Rs. 350/-</div>
+      </div>
+    </div>
+    <p style="font-size:0.75rem; opacity:0.5; margin-top:1.5rem; text-align:center; font-family:'Nunito',sans-serif;">Prices are exclusive of GST. We do not levy service charge.</p>
+  </div>
+</section>
+
+<!-- ══ MARQUEE STRIP ══ -->
+<div class="marquee-strip">
+  <div class="marquee-track">
+    <span>Incredibao</span><span class="dot">✦</span>
+    <span>Baozi</span><span class="dot">✦</span>
+    <span>Gyoza</span><span class="dot">✦</span>
+    <span>Dimsum</span><span class="dot">✦</span>
+    <span>Kombucha</span><span class="dot">✦</span>
+    <span>Ramen</span><span class="dot">✦</span>
+    <span>Katsu Curry</span><span class="dot">✦</span>
+    <span>Pan Asian</span><span class="dot">✦</span>
+    <span>Bangalore</span><span class="dot">✦</span>
+    <span>包给我</span><span class="dot">✦</span>
+    <span>Incredibao</span><span class="dot">✦</span>
+    <span>Baozi</span><span class="dot">✦</span>
+    <span>Gyoza</span><span class="dot">✦</span>
+    <span>Dimsum</span><span class="dot">✦</span>
+    <span>Kombucha</span><span class="dot">✦</span>
+    <span>Ramen</span><span class="dot">✦</span>
+    <span>Katsu Curry</span><span class="dot">✦</span>
+    <span>Pan Asian</span><span class="dot">✦</span>
+    <span>Bangalore</span><span class="dot">✦</span>
+    <span>包给我</span><span class="dot">✦</span>
+  </div>
+</div>
+
+<!-- ══ OUR SPACE ══ -->
+<section id="space">
+  <div class="space-layout">
+    <div class="space-text reveal">
+      <p class="section-label">Our Space</p>
+      <h2 class="section-heading">Where the<br>Alleyway<br>Comes Alive.</h2>
+      <p>Our interiors mirror the vibrant energy of Southeast Asian alleyways — layered, lived-in and richly textured. Every corner is designed to transport you.</p>
+      <p>Metal shutters, lightbox signs, and vintage fans repurposed into lamps evoke raw authenticity and nostalgic charm.</p>
+      <p>An upcycled Mahjong mirror, eclectic posters, and hand-painted murals infuse the space with character and warmth — a visual journey from bustling street corners to intimate storytelling.</p>
+    </div>
+    <div class="space-photos reveal">
+      <img class="space-img space-img-main" src="context/photos/_T3A9645.jpg" alt="Bao To Me dining room — teal banquette seating, mural and corrugated metal ceiling" loading="lazy">
+      <div class="space-img-pair">
+        <img class="space-img" src="context/photos/_T3A9650.jpg" alt="Vintage fan lamps — upcycled décor with warm ambient light" loading="lazy">
+        <img class="space-img" src="context/photos/BAOTOME_DAY1_6540.JPG" alt="Bao To Me interior — warm lighting and hanging lanterns" loading="lazy">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ══ SECOND MARQUEE ══ -->
+<div class="marquee-strip" style="background: var(--cream); border-top: 2px solid var(--black); border-bottom: 2px solid var(--black);">
+  <div class="marquee-track" style="animation-direction: reverse;">
+    <span style="color:var(--black)">Koramangala, Bangalore</span><span class="dot" style="color:var(--red)">✦</span>
+    <span style="color:var(--black)">Lunch 12–3 PM</span><span class="dot" style="color:var(--red)">✦</span>
+    <span style="color:var(--black)">Dinner 7–11 PM</span><span class="dot" style="color:var(--red)">✦</span>
+    <span style="color:var(--black)">Closed Mondays</span><span class="dot" style="color:var(--red)">✦</span>
+    <span style="color:var(--black)">+91 70195 65453</span><span class="dot" style="color:var(--red)">✦</span>
+    <span style="color:var(--black)">@baotomeblr</span><span class="dot" style="color:var(--red)">✦</span>
+    <span style="color:var(--black)">Koramangala, Bangalore</span><span class="dot" style="color:var(--red)">✦</span>
+    <span style="color:var(--black)">Lunch 12–3 PM</span><span class="dot" style="color:var(--red)">✦</span>
+    <span style="color:var(--black)">Dinner 7–11 PM</span><span class="dot" style="color:var(--red)">✦</span>
+    <span style="color:var(--black)">Closed Mondays</span><span class="dot" style="color:var(--red)">✦</span>
+    <span style="color:var(--black)">+91 70195 65453</span><span class="dot" style="color:var(--red)">✦</span>
+    <span style="color:var(--black)">@baotomeblr</span><span class="dot" style="color:var(--red)">✦</span>
+  </div>
+</div>
+
+<!-- ══ REVIEWS ══ -->
+<section id="reviews" aria-labelledby="reviews-heading">
+  <p class="section-label reveal">What Guests Are Saying</p>
+  <h2 class="section-heading reveal" id="reviews-heading">Don't Just Take<br>Our Word For It</h2>
+
+  <div class="reviews-tabs" role="tablist" aria-label="Select review platform">
+    <button class="reviews-tab" role="tab" id="tab-google" aria-selected="true" aria-controls="panel-google" onclick="switchReviewTab('google')">Google</button>
+    <button class="reviews-tab" role="tab" id="tab-zomato" aria-selected="false" aria-controls="panel-zomato" onclick="switchReviewTab('zomato')">Zomato</button>
+  </div>
+
+  <div class="reviews-panel active" id="panel-google" role="tabpanel" aria-labelledby="tab-google">
+    <div class="reviews-rating reveal">
+      <div class="rating-score">4.8</div>
+      <div class="rating-info">
+        <p class="rating-platform">Google Reviews</p>
+        <p class="rating-stars" aria-label="4.8 out of 5 stars">★★★★★</p>
+        <p class="rating-count">Based on 200+ reviews</p>
+      </div>
+    </div>
+    <div class="reviews-carousel-wrap">
+      <button class="reviews-carousel-btn prev" aria-label="Previous reviews" onclick="scrollReviews('panel-google', -1)">&#8592;</button>
+      <div class="reviews-grid" id="grid-google">
+        <article class="review-card reveal">
+          <div class="review-header"><span class="review-name">Priya S.</span><span class="review-source">Google</span></div>
+          <p class="review-stars" aria-label="5 stars">★★★★★</p>
+          <p class="review-text">"The Char Siu Bao is absolutely divine — you can taste the love in every bite. The interiors are stunning, straight out of a Southeast Asian alleyway. Easily one of the best dining experiences in Koramangala!"</p>
+        </article>
+        <article class="review-card reveal">
+          <div class="review-header"><span class="review-name">Sneha K.</span><span class="review-source">Google</span></div>
+          <p class="review-stars" aria-label="5 stars">★★★★★</p>
+          <p class="review-text">"Hidden gem in Koramangala! The Japanese Cheesecake and Mizu Shingen Mochi are unlike anything else in Bangalore. The ambience is so cozy and vibrant. Already planning my next visit."</p>
+        </article>
+        <article class="review-card reveal">
+          <div class="review-header"><span class="review-name">Meera L.</span><span class="review-source">Google</span></div>
+          <p class="review-stars" aria-label="5 stars">★★★★★</p>
+          <p class="review-text">"The baos here are genuinely the best I've had in Bangalore. The Black Sesame Bao for dessert is extraordinary. Service was attentive and friendly — such a warm place. Can't wait to come back with family!"</p>
+        </article>
+        <article class="review-card reveal">
+          <div class="review-header"><span class="review-name">Nisha P.</span><span class="review-source">Google</span></div>
+          <p class="review-stars" aria-label="5 stars">★★★★★</p>
+          <p class="review-text">"Came for a birthday dinner and it was perfect. The ambience transports you completely. The Char Siu Bao is rich and comforting. Every dish was beautifully presented."</p>
+        </article>
+        <article class="review-card reveal">
+          <div class="review-header"><span class="review-name">Rohit T.</span><span class="review-source">Google</span></div>
+          <p class="review-stars" aria-label="5 stars">★★★★★</p>
+          <p class="review-text">"Finally a place in Bangalore that does authentic Pan-Asian right. The Chicken &amp; Shiitake Wonton soup is pure soul food. The staff made us feel at home."</p>
+        </article>
+        <article class="review-card reveal">
+          <div class="review-header"><span class="review-name">Aditya B.</span><span class="review-source">Google</span></div>
+          <p class="review-stars" aria-label="4 stars">★★★★☆</p>
+          <p class="review-text">"Great food, great vibe. The Spiced Edamame is weirdly addictive. Slight wait on a weekend but totally worth it. Will return."</p>
+        </article>
+      </div>
+      <button class="reviews-carousel-btn next" aria-label="Next reviews" onclick="scrollReviews('panel-google', 1)">&#8594;</button>
+    </div>
+  </div>
+
+  <div class="reviews-panel" id="panel-zomato" role="tabpanel" aria-labelledby="tab-zomato">
+    <div class="reviews-rating reveal">
+      <div class="rating-score">4.7</div>
+      <div class="rating-info">
+        <p class="rating-platform">Zomato Reviews</p>
+        <p class="rating-stars" aria-label="4.7 out of 5 stars">★★★★★</p>
+        <p class="rating-count">Based on 150+ reviews</p>
+      </div>
+    </div>
+    <div class="reviews-carousel-wrap">
+      <button class="reviews-carousel-btn prev" aria-label="Previous reviews" onclick="scrollReviews('panel-zomato', -1)">&#8592;</button>
+      <div class="reviews-grid" id="grid-zomato">
+        <article class="review-card reveal">
+          <div class="review-header"><span class="review-name">Rahul M.</span><span class="review-source">Zomato</span></div>
+          <p class="review-stars" aria-label="5 stars">★★★★★</p>
+          <p class="review-text">"Came for lunch and ended up ordering way too much — absolutely no regrets! The Tori Katsu Curry Rice and Gyozas are a must. The staff are warm and attentive. This place deserves all the hype."</p>
+        </article>
+        <article class="review-card reveal">
+          <div class="review-header"><span class="review-name">Arjun P.</span><span class="review-source">Zomato</span></div>
+          <p class="review-stars" aria-label="5 stars">★★★★★</p>
+          <p class="review-text">"Buta Kakuni + Yaki Meshi = perfect dinner combo. The space has so much character — every corner is Instagram-worthy. Perfect for dates and group dinners alike. Will be back soon!"</p>
+        </article>
+        <article class="review-card reveal">
+          <div class="review-header"><span class="review-name">Sneha R.</span><span class="review-source">Zomato</span></div>
+          <p class="review-stars" aria-label="5 stars">★★★★★</p>
+          <p class="review-text">"Best gyozas I've had in Bangalore. The ponzu sauce is on point. Will be back every single week."</p>
+        </article>
+        <article class="review-card reveal">
+          <div class="review-header"><span class="review-name">Kavya D.</span><span class="review-source">Zomato</span></div>
+          <p class="review-stars" aria-label="5 stars">★★★★★</p>
+          <p class="review-text">"The Tori Gyozas are absolutely delicious and the dipping sauce is perfect. Love the dimsum platter format — great for sharing. 10/10 would recommend."</p>
+        </article>
+        <article class="review-card reveal">
+          <div class="review-header"><span class="review-name">Pooja L.</span><span class="review-source">Zomato</span></div>
+          <p class="review-stars" aria-label="5 stars">★★★★★</p>
+          <p class="review-text">"Went with a group of 6 and everyone was happy — that never happens! The Yaki Udon is warming and the baos are perfectly fluffy. Koramangala needed this."</p>
+        </article>
+        <article class="review-card reveal">
+          <div class="review-header"><span class="review-name">Vikram S.</span><span class="review-source">Zomato</span></div>
+          <p class="review-stars" aria-label="5 stars">★★★★★</p>
+          <p class="review-text">"Hidden gem in Koramangala. The space is gorgeous, service is warm, and the Prawn Hargao melts in your mouth."</p>
+        </article>
+      </div>
+      <button class="reviews-carousel-btn next" aria-label="Next reviews" onclick="scrollReviews('panel-zomato', 1)">&#8594;</button>
+    </div>
+  </div>
+
+  <div class="reviews-links reveal">
+    <a href="https://share.google/hKkmZfeZfHggzExfk" target="_blank" rel="noopener" class="btn-link-outline" aria-label="See all Google reviews (opens in new tab)">Google Reviews ↗</a>
+    <a href="https://www.zomato.com/bangalore/bao-to-me-koramangala-1st-block-bangalore/reviews" target="_blank" rel="noopener" class="btn-link-outline red" aria-label="See all Zomato reviews (opens in new tab)">Zomato Reviews ↗</a>
+  </div>
+</section>
+
+<!-- ══ CONTACT ══ -->
+<section id="contact" class="grid-bg">
+  <div class="contact-inner">
+    <div class="contact-brand reveal">
+      <p class="section-label">Find Us</p>
+      <h2 class="section-heading">Come<br>Say Hi.</h2>
+      <p>We'd love to have you at our table. Book online, WhatsApp us, or call ahead.</p>
+      <div style="display:flex;align-items:stretch;gap:1rem;margin-top:1.5rem;">
+        <button class="btn-primary" onclick="openReserveModal()" style="font-family:'Nunito',sans-serif;font-size:0.8rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;border:2px solid var(--red);cursor:pointer;">Book a Table</button>
+        <a href="https://wa.me/917019565453?text=Hi%20Bao%20To%20Me!%20I%27d%20like%20to%20make%20a%20reservation." class="btn-outline" style="display:inline-flex;align-items:center;gap:0.5rem;" target="_blank" rel="noopener">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp Us
+        </a>
+      </div>
+    </div>
+
+    <div class="contact-col reveal">
+      <h4>Location</h4>
+      <p>37, 2nd Floor, CNA Arcade</p>
+      <p>1st Main Road, 1st Block</p>
+      <p>Koramangala — 560034</p>
+      <p>Bangalore, India</p>
+      <br>
+      <h4>Hours</h4>
+      <p>Tuesday – Sunday</p>
+      <p>Lunch: 12:00 PM – 3:00 PM</p>
+      <p>Dinner: 7:00 PM – 11:00 PM</p>
+      <p>Closed Mondays</p>
+    </div>
+
+    <div class="contact-col reveal">
+      <h4>Reach Us</h4>
+      <a href="tel:+917019565453" class="contact-phone">+91 70195 65453</a>
+      <br>
+      <h4>Follow Along</h4>
+      <a href="https://instagram.com/baotomeblr" target="_blank">@baotomeblr</a>
+    </div>
+  </div>
+</section>
+
+<!-- ══ FOOTER ══ -->
+<footer>
+  <p>© 2026 <span>Bao To Me</span> — Pan Asian Kitchen, Bangalore &nbsp;|&nbsp; 包给我 &nbsp;|&nbsp; <span>#INCREDIBAO</span></p>
+</footer>
+
+<!-- ══ MOBILE BOTTOM NAV ══ -->
+<nav class="mobile-bottom-nav" aria-label="Mobile navigation">
+  <a href="#story" class="mobile-nav-item" data-section="story">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
+    </svg>
+    <span>Story</span>
+  </a>
+  <a href="#menu" class="mobile-nav-item" data-section="menu">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/>
+    </svg>
+    <span>Menu</span>
+  </a>
+  <a href="#space" class="mobile-nav-item" data-section="space">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/>
+    </svg>
+    <span>Space</span>
+  </a>
+  <a href="#" class="mobile-nav-item mobile-nav-reserve" data-section="contact" onclick="openReserveModal(event)">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+      <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
+    </svg>
+    <span>Reserve</span>
+  </a>
+</nav>
+
+<!-- ══ RESERVATION MODAL ══ -->
+<div id="reserve-modal" class="reserve-modal" role="dialog" aria-modal="true" aria-labelledby="reserve-modal-title" hidden>
+  <div class="reserve-modal-overlay" onclick="closeReserveModal()"></div>
+  <div class="reserve-modal-content">
+    <div class="reserve-modal-header">
+      <span class="reserve-modal-title" id="reserve-modal-title">Book a Table</span>
+      <button class="reserve-modal-close" onclick="closeReserveModal()" aria-label="Close reservation form">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
+    </div>
+    <iframe
+      src="https://reservations.petpooja.com/form/b6bdf34d414004bed4ed9bcb1d10f73b3d75e05fca864c948a851f88a694bc9f45d429ff95afef29ee7cbacb6552c6ef97b503fbb12ef2198cf3f76614c856fbbbe8af7f5862e65194f5b7d1e0d36705b8d8d797136267c319a7106017c94792"
+      class="reserve-modal-iframe"
+      title="Bao To Me Reservation Form"
+      loading="lazy">
+    </iframe>
+    <div class="reserve-modal-wa">
+      Prefer to WhatsApp?&nbsp;
+      <a href="https://wa.me/917019565453?text=Hi%20Bao%20To%20Me!%20I%27d%20like%20to%20make%20a%20reservation." target="_blank" rel="noopener">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        Message us on WhatsApp
+      </a>
+      &nbsp;·&nbsp; <a href="tel:+917019565453">Call +91 70195 65453</a>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Reservation modal
+  const reserveModal = document.getElementById('reserve-modal');
+  function openReserveModal(e) {
+    if (e) e.preventDefault();
+    reserveModal.hidden = false;
+    document.body.style.overflow = 'hidden';
+    reserveModal.querySelector('.reserve-modal-close').focus();
+  }
+  function closeReserveModal() {
+    reserveModal.hidden = true;
+    document.body.style.overflow = '';
+  }
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && !reserveModal.hidden) closeReserveModal();
+  });
+
+  // Reviews tab switch
+  function switchReviewTab(platform) {
+    document.querySelectorAll('.reviews-panel').forEach(p => p.classList.remove('active'));
+    document.querySelectorAll('.reviews-tab').forEach(t => t.setAttribute('aria-selected', 'false'));
+    document.getElementById('panel-' + platform).classList.add('active');
+    document.getElementById('tab-' + platform).setAttribute('aria-selected', 'true');
+  }
+
+  // Reviews carousel scroll
+  function scrollReviews(panelId, dir) {
+    const grid = document.querySelector('#' + panelId + ' .reviews-grid');
+    if (!grid) return;
+    const cardWidth = grid.querySelector('.review-card').offsetWidth + 16;
+    grid.scrollBy({ left: dir * cardWidth * 2, behavior: 'smooth' });
+  }
+
+  // Tab switching
+  function switchTab(btn, panelId) {
+    document.querySelectorAll('.menu-tab').forEach(t => {
+      t.classList.remove('active');
+      t.setAttribute('aria-selected', 'false');
+    });
+    document.querySelectorAll('.menu-panel').forEach(p => p.classList.remove('active'));
+    btn.classList.add('active');
+    btn.setAttribute('aria-selected', 'true');
+    document.getElementById(panelId).classList.add('active');
+  }
+
+  // Scroll reveal
+  const reveals = document.querySelectorAll('.reveal');
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.1, rootMargin: '0px 0px -60px 0px' });
+
+  reveals.forEach(el => observer.observe(el));
+
+  // Stagger children in grid sections
+  document.querySelectorAll('.menu-grid').forEach(grid => {
+    Array.from(grid.children).forEach((child, i) => {
+      child.style.transitionDelay = (i * 0.04) + 's';
+      child.classList.add('reveal');
+      observer.observe(child);
+    });
+  });
+
+  // Nav background on scroll
+  const nav = document.querySelector('nav');
+  window.addEventListener('scroll', () => {
+    nav.style.boxShadow = window.scrollY > 20 ? '0 2px 20px rgba(0,0,0,0.08)' : 'none';
+  });
+
+  // Active section tracking for desktop nav + mobile bottom nav
+  const sections = ['story', 'menu', 'space', 'contact'];
+  const mobileNavItems = document.querySelectorAll('.mobile-nav-item[data-section]');
+  const desktopNavLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+
+  const sectionObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        const id = entry.target.id;
+        mobileNavItems.forEach(item => {
+          item.classList.toggle('active', item.dataset.section === id);
+        });
+        desktopNavLinks.forEach(link => {
+          link.classList.toggle('active', link.getAttribute('href') === '#' + id);
+        });
+      }
+    });
+  }, { threshold: 0.35 });
+
+  sections.forEach(id => {
+    const el = document.getElementById(id);
+    if (el) sectionObserver.observe(el);
+  });
+</script>
+
+</body>
+</html>
