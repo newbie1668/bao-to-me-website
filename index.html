@@ -7,6 +7,24 @@
   <meta name="description" content="Bao To Me is Bangalore's Pan Asian Kitchen — handcrafted baozi, gyozas, ramen, and more. Born from family recipes. Built for Bangalore. 37, CNA Arcade, Koramangala.">
   <meta name="keywords" content="Bao To Me, Pan Asian, Bangalore, Koramangala, baozi, gyoza, dimsum, ramen, restaurant">
 
+  <link rel="canonical" href="https://baotome.in">
+  <link rel="icon" type="image/png" href="context/logo/Bao To Me Logo without tagline.png">
+  <meta name="theme-color" content="#C92A37">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="restaurant">
+  <meta property="og:title" content="Bao To Me — Pan Asian Kitchen, Koramangala Bangalore">
+  <meta property="og:description" content="Handcrafted baozi, gyozas, and pan-Asian soul food — born from family recipes, built for Bangalore. 37, CNA Arcade, Koramangala.">
+  <meta property="og:url" content="https://baotome.in">
+  <meta property="og:image" content="https://baotome.in/context/photos/_T3A9645.jpg">
+  <meta property="og:site_name" content="Bao To Me">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Bao To Me — Pan Asian Kitchen, Koramangala Bangalore">
+  <meta name="twitter:description" content="Handcrafted baozi, gyozas, and pan-Asian soul food — born from family recipes, built for Bangalore.">
+  <meta name="twitter:image" content="https://baotome.in/context/photos/_T3A9645.jpg">
+
   <!-- Schema.org structured data -->
   <script type="application/ld+json">
   {
@@ -15,9 +33,12 @@
     "name": "Bao To Me",
     "description": "Pan Asian Kitchen in Bangalore — handcrafted baozi, gyozas, dimsum and more. Where heritage meets heart.",
     "url": "https://baotome.in",
+    "menu": "https://baotome.in/#menu",
+    "image": "https://baotome.in/context/photos/_T3A9645.jpg",
     "telephone": "+917019565453",
     "servesCuisine": ["Chinese", "Japanese", "Pan-Asian", "Southeast Asian"],
     "priceRange": "₹₹",
+    "hasMap": "https://maps.google.com/?q=Bao+To+Me,+CNA+Arcade,+Koramangala,+Bangalore",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "37, 2nd floor, CNA Arcade, 1st Main road, 1st Block",
@@ -25,6 +46,12 @@
       "addressRegion": "Bangalore",
       "postalCode": "560034",
       "addressCountry": "IN"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "200",
+      "bestRating": "5"
     },
     "openingHoursSpecification": [
       {
@@ -46,7 +73,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Laila:wght@300;400;500;600;700&family=Nunito:ital,wght@0,300;0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Laila:wght@600;700&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
 
   <style>
     :root {
@@ -1181,7 +1208,7 @@
 </nav>
 
 <!-- ══ HERO ══ -->
-<section id="hero">
+<section id="hero" tabindex="-1">
   <div class="hero-left">
     <p class="hero-eyebrow">Bangalore's Pan Asian Kitchen</p>
     <h1 class="hero-heading">
@@ -1236,16 +1263,16 @@
     </svg>
 
     <!-- Bottom tagline marquee inside hero-right -->
-    <div class="hero-tagline-strip">
+    <div class="hero-tagline-strip" aria-hidden="true">
       <div class="marquee-track">
         <span>Just a-bao the best buns in town</span><span class="dot">✦</span>
         <span>Pan Asian Kitchen</span><span class="dot">✦</span>
         <span>Koramangala, Bangalore</span><span class="dot">✦</span>
-        <span>包给我</span><span class="dot">✦</span>
+        <span lang="zh">包给我</span><span class="dot">✦</span>
         <span>Just a-bao the best buns in town</span><span class="dot">✦</span>
         <span>Pan Asian Kitchen</span><span class="dot">✦</span>
         <span>Koramangala, Bangalore</span><span class="dot">✦</span>
-        <span>包给我</span><span class="dot">✦</span>
+        <span lang="zh">包给我</span><span class="dot">✦</span>
       </div>
     </div>
   </div>
@@ -1314,34 +1341,22 @@
     </div>
     <div class="menu-grid">
       <div class="menu-item">
-        <div class="menu-item-flags"><div class="flag flag-veg"></div></div>
+        <div class="menu-item-flags"><div class="flag flag-veg" role="img" aria-label="Vegetarian"></div></div>
         <div class="menu-item-name">Smashed Cucumber Salad</div>
         <div class="menu-item-desc">Crispy smashed cucumbers with a tangy garlic-sesame dressing, finished with fresh herbs and a hint of spice.</div>
         <div class="menu-item-price">Rs. 335/-</div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-flags"><div class="flag flag-nonveg"></div><div class="flag flag-spicy" style="background:var(--red);width:12px;height:14px;clip-path:polygon(50% 0%,100% 50%,75% 100%,25% 100%,0% 50%)"></div></div>
+        <div class="menu-item-flags"><div class="flag flag-nonveg" role="img" aria-label="Non-vegetarian"></div><div class="flag flag-spicy" role="img" aria-label="Spicy" style="background:var(--red);width:12px;height:14px;clip-path:polygon(50% 0%,100% 50%,75% 100%,25% 100%,0% 50%)"></div></div>
         <div class="menu-item-name">Surimi Stick Salad</div>
         <div class="menu-item-desc">A refreshing salad of tender surimi sticks, crisp cucumbers, and creamy Japanese mayo dressing, topped with sesame seeds.</div>
         <div class="menu-item-price">Rs. 415/-</div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-flags"><div class="flag flag-veg"></div></div>
+        <div class="menu-item-flags"><div class="flag flag-veg" role="img" aria-label="Vegetarian"></div></div>
         <div class="menu-item-name">Miso Soup Veg</div>
         <div class="menu-item-desc">A comforting broth of fermented soybean paste, with tofu, seaweed, and scallions.</div>
         <div class="menu-item-price">Rs. 295/-</div>
-      </div>
-      <div class="menu-item">
-        <div class="menu-item-flags"><div class="flag flag-nonveg"></div></div>
-        <div class="menu-item-name">Tori Katsu Sando (1 pc)</div>
-        <div class="menu-item-desc">Golden, breaded chicken cutlet, drizzled with savory katsu sauce, sandwiched between pillowy, soft Japanese milk bread.</div>
-        <div class="menu-item-price">Rs. 495/-</div>
-      </div>
-      <div class="menu-item">
-        <div class="menu-item-flags"><div class="flag flag-nonveg"></div></div>
-        <div class="menu-item-name">Prawn Toast Mantou (2 pcs)</div>
-        <div class="menu-item-desc">Crispy fried mantou stuffed with savory prawn filling and encrusted with sesame seeds.</div>
-        <div class="menu-item-price">Rs. 545/-</div>
       </div>
     </div>
   </div>
@@ -1353,67 +1368,79 @@
     </div>
     <div class="menu-grid">
       <div class="menu-item">
-        <div class="menu-item-flags"><div class="flag flag-veg"></div></div>
+        <div class="menu-item-flags"><div class="flag flag-veg" role="img" aria-label="Vegetarian"></div></div>
         <div class="menu-item-name">Veg Wonton</div>
         <div class="menu-item-desc">Soft vegetable wontons served in a bold, spicy soy-based broth.</div>
         <div class="menu-item-price">Rs. 425/- <span class="extra">+ Extra Wonton (1 pc) Rs.125/-</span></div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-flags"><div class="flag flag-veg"></div></div>
+        <div class="menu-item-flags"><div class="flag flag-veg" role="img" aria-label="Vegetarian"></div></div>
         <div class="menu-item-name">Truffle Cream Cheese Dimsum (4 pcs)</div>
         <div class="menu-item-desc">Delicate dumplings filled with rich cream cheese, medley of mushrooms and a touch of aromatic truffle oil.</div>
         <div class="menu-item-price">Rs. 495/- <span class="extra">+ Extra Dimsum (1 pc) Rs.145/-</span></div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-flags"><div class="flag flag-veg"></div></div>
-        <div class="menu-item-name">Sichimi Spiced Lotus Stem Chips</div>
-        <div class="menu-item-desc">Crispy lotus stem chips seasoned with our in-house dry Sichimi spice mix. Served with Japanese mayo.</div>
+        <div class="menu-item-flags"><div class="flag flag-veg" role="img" aria-label="Vegetarian"></div></div>
+        <div class="menu-item-name">Shichimi Spiced Lotus Stem Chips</div>
+        <div class="menu-item-desc">Crispy lotus stem chips seasoned with our in-house dry Shichimi spice mix. Served with Japanese mayo.</div>
         <div class="menu-item-price">Rs. 415/-</div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-flags"><div class="flag flag-veg"></div></div>
+        <div class="menu-item-flags"><div class="flag flag-veg" role="img" aria-label="Vegetarian"></div></div>
         <div class="menu-item-name">Spiced Edamame</div>
         <div class="menu-item-desc">Steamed edamame tossed in a savory blend of garlic and in-house spice mix.</div>
         <div class="menu-item-price">Rs. 425/-</div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-flags"><div class="flag flag-veg"></div></div>
+        <div class="menu-item-flags"><div class="flag flag-veg" role="img" aria-label="Vegetarian"></div></div>
         <div class="menu-item-name">Veg Jhol Momo</div>
         <div class="menu-item-desc">Soft, vegetable momos served in a light, gently spiced broth with comforting Himalayan flavours.</div>
         <div class="menu-item-price">Rs. 425/- <span class="extra">+ Extra Momo (1 pc) Rs.125/-</span></div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-flags"><div class="flag flag-nonveg"></div></div>
+        <div class="menu-item-flags"><div class="flag flag-nonveg" role="img" aria-label="Non-vegetarian"></div></div>
         <div class="menu-item-name">Chicken Jhol Momo</div>
         <div class="menu-item-desc">Soft, juicy chicken momos served in a light, gently spiced broth with comforting Himalayan flavours.</div>
         <div class="menu-item-price">Rs. 475/- <span class="extra">+ Extra Momo (1 pc) Rs.145/-</span></div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-flags"><div class="flag flag-nonveg"></div></div>
+        <div class="menu-item-flags"><div class="flag flag-nonveg" role="img" aria-label="Non-vegetarian"></div></div>
         <div class="menu-item-name">Chicken &amp; Shiitake Mushroom Wonton (4 pcs)</div>
         <div class="menu-item-desc">Tender minced chicken thigh and shiitake-filled wontons in a spicy soy broth.</div>
         <div class="menu-item-price">Rs. 475/- <span class="extra">+ Extra Wonton (1 pc) Rs.145/-</span></div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-flags"><div class="flag flag-nonveg"></div></div>
+        <div class="menu-item-flags"><div class="flag flag-nonveg" role="img" aria-label="Non-vegetarian"></div></div>
+        <div class="menu-item-name">Tori Katsu Sando (1 pc)</div>
+        <div class="menu-item-desc">Golden, breaded chicken cutlet, drizzled with savory katsu sauce, sandwiched between pillowy, soft Japanese milk bread.</div>
+        <div class="menu-item-price">Rs. 495/-</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-flags"><div class="flag flag-nonveg" role="img" aria-label="Non-vegetarian"></div></div>
+        <div class="menu-item-name">Prawn Toast Mantou (2 pcs)</div>
+        <div class="menu-item-desc">Crispy fried mantou stuffed with savory prawn filling and encrusted with sesame seeds.</div>
+        <div class="menu-item-price">Rs. 545/-</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-flags"><div class="flag flag-nonveg" role="img" aria-label="Non-vegetarian"></div></div>
         <div class="menu-item-name">Tori Kara-Age</div>
         <div class="menu-item-desc">Juicy, tender, Japanese fried chicken, marinated in soy and ginger, served with ponzu sauce and Japanese mayo.</div>
         <div class="menu-item-price">Rs. 425/-</div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-flags"><div class="flag flag-nonveg"></div></div>
+        <div class="menu-item-flags"><div class="flag flag-nonveg" role="img" aria-label="Non-vegetarian"></div></div>
         <div class="menu-item-name">Prawn Hargao (4 pcs)</div>
         <div class="menu-item-desc">Delicate steamed dumplings with succulent prawn and bamboo shoot filling, wrapped in translucent cover.</div>
         <div class="menu-item-price">Rs. 495/- <span class="extra">+ Extra Hargao (1 pc) Rs.145/-</span></div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-flags"><div class="flag flag-nonveg"></div></div>
+        <div class="menu-item-flags"><div class="flag flag-nonveg" role="img" aria-label="Non-vegetarian"></div></div>
         <div class="menu-item-name">Tori Gyozas (4 pcs)</div>
         <div class="menu-item-desc">Japanese pan-seared pot sticker with minced chicken filling. Served with spicy chilli sauce and tangy ponzu sauce.</div>
         <div class="menu-item-price">Rs. 415/- <span class="extra">+ Extra Gyoza (1 pc) Rs.120/-</span></div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-flags"><div class="flag flag-veg"></div></div>
+        <div class="menu-item-flags"><div class="flag flag-veg" role="img" aria-label="Vegetarian"></div></div>
         <div class="menu-item-name">Yasai Gyozas (4 pcs)</div>
         <div class="menu-item-desc">Japanese pan-seared pot sticker with mixed veg filling. Served with spicy chilli sauce and tangy ponzu sauce.</div>
         <div class="menu-item-price">Rs. 375/- <span class="extra">+ Extra Gyoza (1 pc) Rs.110/-</span></div>
@@ -1428,37 +1455,37 @@
     </div>
     <div class="menu-grid">
       <div class="menu-item">
-        <div class="menu-item-flags"><div class="flag flag-veg"></div></div>
+        <div class="menu-item-flags"><div class="flag flag-veg" role="img" aria-label="Vegetarian"></div></div>
         <div class="menu-item-name">Veg Bao</div>
         <div class="menu-item-desc">Medley of green leafy veggies, mushrooms, carrots, onions. Served with spicy chilli sauce and chilli oil.</div>
         <div class="menu-item-price">Rs. 375/- <span class="extra">+ Extra Bao (1 pc) Rs.145/-</span></div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-flags"><div class="flag flag-veg"></div></div>
+        <div class="menu-item-flags"><div class="flag flag-veg" role="img" aria-label="Vegetarian"></div></div>
         <div class="menu-item-name">Spicy Tofu Bao</div>
         <div class="menu-item-desc">Aromatic chilli oil infused tofu cubes, spring onions. Served with spicy chilli sauce and chilli oil.</div>
         <div class="menu-item-price">Rs. 415/- <span class="extra">+ Extra Bao (1 pc) Rs.160/-</span></div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-flags"><div class="flag flag-nonveg"></div></div>
+        <div class="menu-item-flags"><div class="flag flag-nonveg" role="img" aria-label="Non-vegetarian"></div></div>
         <div class="menu-item-name">Chicken Bao</div>
         <div class="menu-item-desc">Tender chicken thighs, onion, spring onions and sesame oil. Served with spicy chilli sauce and chilli oil.</div>
         <div class="menu-item-price">Rs. 425/- <span class="extra">+ Extra Bao (1 pc) Rs.165/-</span></div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-flags"><div class="flag flag-nonveg"></div></div>
+        <div class="menu-item-flags"><div class="flag flag-nonveg" role="img" aria-label="Non-vegetarian"></div></div>
         <div class="menu-item-name">Schezwan Chicken Bao</div>
         <div class="menu-item-desc">Spicy, aromatic, in-house schezwan sauce chicken. Served with spicy chilli sauce and chilli oil.</div>
         <div class="menu-item-price">Rs. 425/- <span class="extra">+ Extra Bao (1 pc) Rs.165/-</span></div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-flags"><div class="flag flag-pork"></div></div>
+        <div class="menu-item-flags"><div class="flag flag-pork" role="img" aria-label="Contains pork"></div></div>
         <div class="menu-item-name">Char Siu Bao ★</div>
         <div class="menu-item-desc">Dad's recipe cantonese style barbecue pork-belly. Served with spicy chilli sauce and chilli oil.</div>
         <div class="menu-item-price">Rs. 495/- <span class="extra">+ Extra Bao (1 pc) Rs.190/-</span></div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-flags"><div class="flag flag-pork"></div></div>
+        <div class="menu-item-flags"><div class="flag flag-pork" role="img" aria-label="Contains pork"></div></div>
         <div class="menu-item-name">Hujiao Bing</div>
         <div class="menu-item-desc">Oven roasted Taiwanese pepper pork buns. Served with spicy chilli sauce and chilli oil.</div>
         <div class="menu-item-price">Rs. 495/- <span class="extra">+ Extra Bao (1 pc) Rs.190/-</span></div>
@@ -1473,61 +1500,61 @@
     </div>
     <div class="menu-grid">
       <div class="menu-item">
-        <div class="menu-item-flags"><div class="flag flag-veg"></div></div>
+        <div class="menu-item-flags"><div class="flag flag-veg" role="img" aria-label="Vegetarian"></div></div>
         <div class="menu-item-name">Nasu Katsu Curry Rice</div>
         <div class="menu-item-desc">Crispy panko breaded eggplant, served with rich Japanese curry and short grain rice.</div>
         <div class="menu-item-price">Rs. 545/- <span class="extra">+ Add Nasu Katsu Rs.195</span></div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-flags"><div class="flag flag-veg"></div></div>
+        <div class="menu-item-flags"><div class="flag flag-veg" role="img" aria-label="Vegetarian"></div></div>
         <div class="menu-item-name">Yasai Yaki Udon</div>
         <div class="menu-item-desc">Stir-fried udon noodles with a mix of fresh vegetables, tossed in a savory soy-based sauce.</div>
         <div class="menu-item-price">Rs. 545/- <span class="extra">+ Add Egg Rs.40</span></div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-flags"><div class="flag flag-veg"></div></div>
+        <div class="menu-item-flags"><div class="flag flag-veg" role="img" aria-label="Vegetarian"></div></div>
         <div class="menu-item-name">Yasai Yaki Meshi ★</div>
         <div class="menu-item-desc">Stir fried Japanese short grain rice with garlic and veggies.</div>
         <div class="menu-item-price">Rs. 545/- <span class="extra">+ Add Egg Rs.40</span></div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-flags"><div class="flag flag-nonveg"></div></div>
+        <div class="menu-item-flags"><div class="flag flag-nonveg" role="img" aria-label="Non-vegetarian"></div></div>
         <div class="menu-item-name">Tori Katsu Curry Rice ★</div>
         <div class="menu-item-desc">Crispy panko breaded chicken thigh, served with rich Japanese curry and short grain rice.</div>
         <div class="menu-item-price">Rs. 595/- <span class="extra">+ Add Tori Katsu Rs.245</span></div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-flags"><div class="flag flag-nonveg"></div></div>
+        <div class="menu-item-flags"><div class="flag flag-nonveg" role="img" aria-label="Non-vegetarian"></div></div>
         <div class="menu-item-name">Tori Yaki Udon</div>
         <div class="menu-item-desc">Stir-fried udon noodles with tender chicken, vibrant vegetables, and a savory soy-based sauce.</div>
         <div class="menu-item-price">Rs. 595/-</div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-flags"><div class="flag flag-nonveg"></div></div>
+        <div class="menu-item-flags"><div class="flag flag-nonveg" role="img" aria-label="Non-vegetarian"></div></div>
         <div class="menu-item-name">Tori Yaki Meshi</div>
         <div class="menu-item-desc">Stir fried Japanese short grain rice with tender chicken cubes, garlic and veggies.</div>
         <div class="menu-item-price">Rs. 595/-</div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-flags"><div class="flag flag-veg"></div></div>
+        <div class="menu-item-flags"><div class="flag flag-veg" role="img" aria-label="Vegetarian"></div></div>
         <div class="menu-item-name">Yasai Itame — Veg</div>
         <div class="menu-item-desc">Stir-fried seasonal vegetables in a savory soy garlic sauce.</div>
         <div class="menu-item-price">Rs. 475/-</div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-flags"><div class="flag flag-nonveg"></div></div>
+        <div class="menu-item-flags"><div class="flag flag-nonveg" role="img" aria-label="Non-vegetarian"></div></div>
         <div class="menu-item-name">Schezwan Chicken</div>
         <div class="menu-item-desc">Crispy chicken tossed in a bold, spicy Szechuan sauce with a punch of garlic, ginger, and fiery chili heat.</div>
         <div class="menu-item-price">Rs. 495/-</div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-flags"><div class="flag flag-pork"></div></div>
+        <div class="menu-item-flags"><div class="flag flag-pork" role="img" aria-label="Contains pork"></div></div>
         <div class="menu-item-name">Buta Kakuni ★</div>
         <div class="menu-item-desc">Tender, braised pork belly in a savory-sweet soy sauce glaze, simmered to melt-in-your-mouth perfection.</div>
         <div class="menu-item-price">Rs. 595/-</div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-flags"><div class="flag flag-veg"></div></div>
+        <div class="menu-item-flags"><div class="flag flag-veg" role="img" aria-label="Vegetarian"></div></div>
         <div class="menu-item-name">Gohan</div>
         <div class="menu-item-desc">Steamed Japanese rice. The perfect accompaniment.</div>
         <div class="menu-item-price">Rs. 245/-</div>
@@ -1542,43 +1569,43 @@
     </div>
     <div class="menu-grid">
       <div class="menu-item">
-        <div class="menu-item-flags"><div class="flag flag-veg"></div></div>
+        <div class="menu-item-flags"><div class="flag flag-veg" role="img" aria-label="Vegetarian"></div></div>
         <div class="menu-item-name">Dou Sha Bao</div>
         <div class="menu-item-desc">Mom's recipe chinese sweet red bean bao.</div>
         <div class="menu-item-price">Rs. 345/-</div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-flags"><div class="flag flag-egg"></div></div>
+        <div class="menu-item-flags"><div class="flag flag-egg" role="img" aria-label="Contains egg"></div></div>
         <div class="menu-item-name">Custard Bao</div>
         <div class="menu-item-desc">Home-made thick, rich, sweet custard bao.</div>
         <div class="menu-item-price">Rs. 345/-</div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-flags"><div class="flag flag-veg"></div></div>
+        <div class="menu-item-flags"><div class="flag flag-veg" role="img" aria-label="Vegetarian"></div></div>
         <div class="menu-item-name">Black Sesame Bao ★</div>
         <div class="menu-item-desc">Rich, fragrant and nutty, black sesame paste with just the right amount of sweetness.</div>
         <div class="menu-item-price">Rs. 345/-</div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-flags"><div class="flag flag-veg"></div></div>
+        <div class="menu-item-flags"><div class="flag flag-veg" role="img" aria-label="Vegetarian"></div></div>
         <div class="menu-item-name">Mizu Shingen Mochi ★</div>
         <div class="menu-item-desc">A delicate, raindrop-shaped dessert made from mineral water and agar, served with roasted soybean flour and black sugar syrup.</div>
         <div class="menu-item-price">Rs. 375/-</div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-flags"><div class="flag flag-egg"></div></div>
+        <div class="menu-item-flags"><div class="flag flag-egg" role="img" aria-label="Contains egg"></div></div>
         <div class="menu-item-name">Japanese Cheesecake ★</div>
         <div class="menu-item-desc">A feather-light soufflé cheesecake with delicate cream cheese notes and served with berry cream.</div>
         <div class="menu-item-price">Rs. 375/-</div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-flags"><div class="flag flag-egg"></div></div>
+        <div class="menu-item-flags"><div class="flag flag-egg" role="img" aria-label="Contains egg"></div></div>
         <div class="menu-item-name">Matcha Crème Brûlée ★</div>
         <div class="menu-item-desc">Silky matcha custard with a crisp caramelised sugar crust.</div>
         <div class="menu-item-price">Rs. 375/-</div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-flags"><div class="flag flag-egg"></div></div>
+        <div class="menu-item-flags"><div class="flag flag-egg" role="img" aria-label="Contains egg"></div></div>
         <div class="menu-item-name">Dessert Bao Basket</div>
         <div class="menu-item-desc">A steamed basket of one each of our three house-favourite dessert baos.</div>
         <div class="menu-item-price">Rs. 495/-</div>
@@ -1633,28 +1660,28 @@
 </section>
 
 <!-- ══ MARQUEE STRIP ══ -->
-<div class="marquee-strip">
+<div class="marquee-strip" aria-hidden="true">
   <div class="marquee-track">
     <span>Incredibao</span><span class="dot">✦</span>
     <span>Baozi</span><span class="dot">✦</span>
     <span>Gyoza</span><span class="dot">✦</span>
     <span>Dimsum</span><span class="dot">✦</span>
     <span>Kombucha</span><span class="dot">✦</span>
-    <span>Ramen</span><span class="dot">✦</span>
+    <span>Udon</span><span class="dot">✦</span>
     <span>Katsu Curry</span><span class="dot">✦</span>
     <span>Pan Asian</span><span class="dot">✦</span>
     <span>Bangalore</span><span class="dot">✦</span>
-    <span>包给我</span><span class="dot">✦</span>
+    <span lang="zh">包给我</span><span class="dot">✦</span>
     <span>Incredibao</span><span class="dot">✦</span>
     <span>Baozi</span><span class="dot">✦</span>
     <span>Gyoza</span><span class="dot">✦</span>
     <span>Dimsum</span><span class="dot">✦</span>
     <span>Kombucha</span><span class="dot">✦</span>
-    <span>Ramen</span><span class="dot">✦</span>
+    <span>Udon</span><span class="dot">✦</span>
     <span>Katsu Curry</span><span class="dot">✦</span>
     <span>Pan Asian</span><span class="dot">✦</span>
     <span>Bangalore</span><span class="dot">✦</span>
-    <span>包给我</span><span class="dot">✦</span>
+    <span lang="zh">包给我</span><span class="dot">✦</span>
   </div>
 </div>
 
@@ -1669,17 +1696,17 @@
       <p>An upcycled Mahjong mirror, eclectic posters, and hand-painted murals infuse the space with character and warmth — a visual journey from bustling street corners to intimate storytelling.</p>
     </div>
     <div class="space-photos reveal">
-      <img class="space-img space-img-main" src="context/photos/_T3A9645.jpg" alt="Bao To Me dining room — teal banquette seating, mural and corrugated metal ceiling" loading="lazy">
+      <img class="space-img space-img-main" src="context/photos/_T3A9645.jpg" alt="Bao To Me dining room — teal banquette seating, mural and corrugated metal ceiling" loading="lazy" width="1200" height="800">
       <div class="space-img-pair">
-        <img class="space-img" src="context/photos/_T3A9650.jpg" alt="Vintage fan lamps — upcycled décor with warm ambient light" loading="lazy">
-        <img class="space-img" src="context/photos/BAOTOME_DAY1_6540.JPG" alt="Bao To Me interior — warm lighting and hanging lanterns" loading="lazy">
+        <img class="space-img" src="context/photos/_T3A9650.jpg" alt="Vintage fan lamps — upcycled décor with warm ambient light" loading="lazy" width="600" height="400">
+        <img class="space-img" src="context/photos/BAOTOME_DAY1_6540.JPG" alt="Bao To Me interior — warm lighting and hanging lanterns" loading="lazy" width="600" height="400">
       </div>
     </div>
   </div>
 </section>
 
 <!-- ══ SECOND MARQUEE ══ -->
-<div class="marquee-strip" style="background: var(--cream); border-top: 2px solid var(--black); border-bottom: 2px solid var(--black);">
+<div class="marquee-strip" style="background: var(--cream); border-top: 2px solid var(--black); border-bottom: 2px solid var(--black);" aria-hidden="true">
   <div class="marquee-track" style="animation-direction: reverse;">
     <span style="color:var(--black)">Koramangala, Bangalore</span><span class="dot" style="color:var(--red)">✦</span>
     <span style="color:var(--black)">Lunch 12–3 PM</span><span class="dot" style="color:var(--red)">✦</span>
@@ -1848,7 +1875,7 @@
 
 <!-- ══ FOOTER ══ -->
 <footer>
-  <p>© 2026 <span>Bao To Me</span> — Pan Asian Kitchen, Bangalore &nbsp;|&nbsp; 包给我 &nbsp;|&nbsp; <span>#INCREDIBAO</span></p>
+  <p>© 2026 <span>Bao To Me</span> — Pan Asian Kitchen, Bangalore &nbsp;|&nbsp; <span lang="zh">包给我</span> &nbsp;|&nbsp; <span>#INCREDIBAO</span></p>
 </footer>
 
 <!-- ══ MOBILE BOTTOM NAV ══ -->
@@ -1909,15 +1936,30 @@
 <script>
   // Reservation modal
   const reserveModal = document.getElementById('reserve-modal');
+
+  function handleModalTrap(e) {
+    if (e.key !== 'Tab') return;
+    const focusable = reserveModal.querySelectorAll('button, [href], iframe, input, select, textarea, [tabindex]:not([tabindex="-1"])');
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (e.shiftKey) {
+      if (document.activeElement === first) { e.preventDefault(); last.focus(); }
+    } else {
+      if (document.activeElement === last) { e.preventDefault(); first.focus(); }
+    }
+  }
+
   function openReserveModal(e) {
     if (e) e.preventDefault();
     reserveModal.hidden = false;
     document.body.style.overflow = 'hidden';
     reserveModal.querySelector('.reserve-modal-close').focus();
+    document.addEventListener('keydown', handleModalTrap);
   }
   function closeReserveModal() {
     reserveModal.hidden = true;
     document.body.style.overflow = '';
+    document.removeEventListener('keydown', handleModalTrap);
   }
   document.addEventListener('keydown', (e) => {
     if (e.key === 'Escape' && !reserveModal.hidden) closeReserveModal();
