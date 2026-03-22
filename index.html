@@ -238,6 +238,7 @@
 
     .hero-actions {
       display: flex;
+      flex-wrap: wrap;
       gap: 1rem;
       position: relative;
     }
@@ -489,6 +490,7 @@
 
     .lets-eat-actions {
       display: flex;
+      flex-wrap: wrap;
       gap: 1.2rem;
       justify-content: center;
       position: relative;
@@ -1169,8 +1171,11 @@
 
     @media (max-width: 600px) {
       .space-layout { grid-template-columns: 1fr; gap: 2.5rem; }
+      .space-text { position: static; }
       .space-img-pair .space-img { height: 160px; }
       .menu-grid { grid-template-columns: 1fr; }
+      .menu-cat-title { font-size: 2rem; }
+      .story-callout-text { font-size: 1.6rem; }
       .hero-heading { font-size: 3rem; }
       .lets-eat-heading { font-size: 4rem; }
 
