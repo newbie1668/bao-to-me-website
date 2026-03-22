@@ -11,8 +11,11 @@
   <link rel="icon" type="image/png" href="context/logo/Bao To Me Logo without tagline.png">
   <meta name="theme-color" content="#C92A37">
 
+  <meta name="robots" content="index, follow">
+
   <!-- Open Graph -->
-  <meta property="og:type" content="restaurant">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="en_IN">
   <meta property="og:title" content="Bao To Me — Pan Asian Kitchen, Koramangala Bangalore">
   <meta property="og:description" content="Handcrafted baozi, gyozas, and pan-Asian soul food — born from family recipes, built for Bangalore. 37, CNA Arcade, Koramangala.">
   <meta property="og:url" content="https://baotome.in">
@@ -21,6 +24,7 @@
 
   <!-- Twitter Card -->
   <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@baotomeblr">
   <meta name="twitter:title" content="Bao To Me — Pan Asian Kitchen, Koramangala Bangalore">
   <meta name="twitter:description" content="Handcrafted baozi, gyozas, and pan-Asian soul food — born from family recipes, built for Bangalore.">
   <meta name="twitter:image" content="https://baotome.in/context/photos/_T3A9645.jpg">
@@ -38,7 +42,7 @@
     "telephone": "+917019565453",
     "servesCuisine": ["Chinese", "Japanese", "Pan-Asian", "Southeast Asian"],
     "priceRange": "₹₹",
-    "hasMap": "https://maps.google.com/?q=Bao+To+Me,+CNA+Arcade,+Koramangala,+Bangalore",
+    "hasMap": "https://www.google.com/maps/place/Bao+To+Me/@12.9289811,77.6351677,17z/data=!4m6!3m5!1s0x3bae15780158e4c5:0x2c66aa50f5b24879!8m2!3d12.9289811!4d77.6351677!16s%2Fg%2F11rl1c6z1m",
     "address": {
       "@type": "PostalAddress",
       "streetAddress": "37, 2nd floor, CNA Arcade, 1st Main road, 1st Block",
@@ -49,8 +53,8 @@
     },
     "aggregateRating": {
       "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "reviewCount": "200",
+      "ratingValue": "4.7",
+      "reviewCount": "191",
       "bestRating": "5"
     },
     "openingHoursSpecification": [
@@ -1160,6 +1164,20 @@
     .btn-link-outline.red { border-color: var(--red); color: var(--red); }
     .btn-link-outline.red:hover { background: var(--red); color: var(--white); }
 
+    .review-verify-link {
+      display: block;
+      font-family: var(--font-sans);
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(13,13,13,0.35);
+      text-decoration: none;
+      margin-bottom: 0.75rem;
+      transition: color 0.2s;
+    }
+    .review-verify-link:hover { color: var(--red); }
+
     /* ── RESPONSIVE ── */
     @media (max-width: 900px) {
       #hero { grid-template-columns: 1fr; }
@@ -1198,7 +1216,7 @@
 <!-- ══ NAV ══ -->
 <nav aria-label="Main navigation">
   <a class="nav-logo" href="#hero">
-    <img src="context/logo/Bao To Me Logo without tagline.png" alt="Bao To Me logo">
+    <img src="context/logo/Bao To Me Logo without tagline.png" alt="Bao To Me logo" width="44" height="44">
     <div class="nav-brand">
       Bao To Me
       <span>Pan Asian Kitchen</span>
@@ -1212,6 +1230,7 @@
   </ul>
 </nav>
 
+<main>
 <!-- ══ HERO ══ -->
 <section id="hero" tabindex="-1">
   <div class="hero-left">
@@ -1236,8 +1255,8 @@
       <path d="M10,100 Q10,60 40,55 Q35,20 70,20 Q85,5 105,20 Q125,5 145,25 Q175,20 185,50 Q200,55 195,80 Q195,105 170,105 L30,105 Q10,105 10,100Z" fill="white"/>
       <path d="M10,100 Q10,60 40,55 Q35,20 70,20 Q85,5 105,20 Q125,5 145,25 Q175,20 185,50 Q200,55 195,80 Q195,105 170,105 L30,105 Q10,105 10,100Z" fill="none" stroke="white" stroke-width="0"/>
       <!-- Wave pattern inside cloud -->
-      <clipPath id="c1"><path d="M10,100 Q10,60 40,55 Q35,20 70,20 Q85,5 105,20 Q125,5 145,25 Q175,20 185,50 Q200,55 195,80 Q195,105 170,105 L30,105 Q10,105 10,100Z"/></clipPath>
-      <g clip-path="url(#c1)">
+      <clipPath id="cloud-clip-1"><path d="M10,100 Q10,60 40,55 Q35,20 70,20 Q85,5 105,20 Q125,5 145,25 Q175,20 185,50 Q200,55 195,80 Q195,105 170,105 L30,105 Q10,105 10,100Z"/></clipPath>
+      <g clip-path="url(#cloud-clip-1)">
         <g fill="none" stroke="white" stroke-width="1.5" opacity="0.5">
           <path d="M0,110 Q10,95 20,110 Q30,95 40,110 Q50,95 60,110 Q70,95 80,110 Q90,95 100,110 Q110,95 120,110 Q130,95 140,110 Q150,95 160,110 Q170,95 180,110 Q190,95 200,110"/>
           <path d="M0,95 Q10,80 20,95 Q30,80 40,95 Q50,80 60,95 Q70,80 80,95 Q90,80 100,95 Q110,80 120,95 Q130,80 140,95 Q150,80 160,95 Q170,80 180,95 Q190,80 200,95"/>
@@ -1256,8 +1275,8 @@
 
     <svg class="cloud-deco cloud-deco-2" viewBox="0 0 200 130" xmlns="http://www.w3.org/2000/svg">
       <path d="M10,100 Q10,60 40,55 Q35,20 70,20 Q85,5 105,20 Q125,5 145,25 Q175,20 185,50 Q200,55 195,80 Q195,105 170,105 L30,105 Q10,105 10,100Z" fill="white"/>
-      <clipPath id="c2"><path d="M10,100 Q10,60 40,55 Q35,20 70,20 Q85,5 105,20 Q125,5 145,25 Q175,20 185,50 Q200,55 195,80 Q195,105 170,105 L30,105 Q10,105 10,100Z"/></clipPath>
-      <g clip-path="url(#c2)">
+      <clipPath id="cloud-clip-2"><path d="M10,100 Q10,60 40,55 Q35,20 70,20 Q85,5 105,20 Q125,5 145,25 Q175,20 185,50 Q200,55 195,80 Q195,105 170,105 L30,105 Q10,105 10,100Z"/></clipPath>
+      <g clip-path="url(#cloud-clip-2)">
         <g fill="none" stroke="white" stroke-width="1.5" opacity="0.5">
           <path d="M0,110 Q10,95 20,110 Q30,95 40,110 Q50,95 60,110 Q70,95 80,110 Q90,95 100,110 Q110,95 120,110 Q130,95 140,110 Q150,95 160,110 Q170,95 180,110 Q190,95 200,110"/>
           <path d="M0,95 Q10,80 20,95 Q30,80 40,95 Q50,80 60,95 Q70,80 80,95 Q90,80 100,95 Q110,80 120,95 Q130,80 140,95 Q150,80 160,95 Q170,80 180,95 Q190,80 200,95"/>
@@ -1318,7 +1337,7 @@
     <p class="lets-eat-sub">From dumplings to big plates — every dish is crafted with intention.</p>
     <div class="lets-eat-actions">
       <button class="btn-white" onclick="openReserveModal()" style="font-family:'Nunito',sans-serif;font-size:0.8rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;border:2px solid var(--white);cursor:pointer;">Book a Table</button>
-      <a href="https://wa.me/917019565453?text=Hi%20Bao%20To%20Me!%20I%27d%20like%20to%20make%20a%20reservation." class="btn-red-outline" target="_blank" rel="noopener">WhatsApp Us</a>
+      <a href="https://wa.me/917019565453?text=Hi%20Bao%20To%20Me!%20I%27d%20like%20to%20make%20a%20reservation." class="btn-red-outline" target="_blank" rel="noopener noreferrer">WhatsApp Us</a>
     </div>
   </div>
 </section>
@@ -1740,45 +1759,33 @@
 
   <div class="reviews-panel active" id="panel-google" role="tabpanel" aria-labelledby="tab-google">
     <div class="reviews-rating reveal">
-      <div class="rating-score">4.8</div>
+      <div class="rating-score">4.7</div>
       <div class="rating-info">
         <p class="rating-platform">Google Reviews</p>
-        <p class="rating-stars" aria-label="4.8 out of 5 stars">★★★★★</p>
-        <p class="rating-count">Based on 200+ reviews</p>
+        <p class="rating-stars" aria-label="4.7 out of 5 stars">★★★★★</p>
+        <p class="rating-count">Based on 191 reviews</p>
       </div>
     </div>
     <div class="reviews-carousel-wrap">
       <button class="reviews-carousel-btn prev" aria-label="Previous reviews" onclick="scrollReviews('panel-google', -1)">&#8592;</button>
       <div class="reviews-grid" id="grid-google">
         <article class="review-card reveal">
-          <div class="review-header"><span class="review-name">Priya S.</span><span class="review-source">Google</span></div>
+          <a href="https://www.google.com/maps/place/Bao+To+Me/@12.9289811,77.6351677,17z/data=!4m8!3m7!1s0x3bae15780158e4c5:0x2c66aa50f5b24879!8m2!3d12.9289811!4d77.6351677!9m1!1b1!16s%2Fg%2F11rl1c6z1m" target="_blank" rel="noopener noreferrer" class="review-verify-link" aria-label="View on Google Maps">Verified on Google ↗</a>
+          <div class="review-header"><span class="review-name">Maju Q</span><span class="review-source">Google</span></div>
           <p class="review-stars" aria-label="5 stars">★★★★★</p>
-          <p class="review-text">"The Char Siu Bao is absolutely divine — you can taste the love in every bite. The interiors are stunning, straight out of a Southeast Asian alleyway. Easily one of the best dining experiences in Koramangala!"</p>
+          <p class="review-text">"Came with an empty stomach, left with a full one! Really enjoyed our family-style dining experience at Bao To Me. We were a group of 6 including a toddler. The atmosphere is cozy, the aesthetic is on point — vibrant colors and the decor adds a personal touch to the space. The edamame was wonderfully seasoned with bits of garlic and chilli, and the lotus chips were fried to perfection. I'm already planning my next visit here!"</p>
         </article>
         <article class="review-card reveal">
-          <div class="review-header"><span class="review-name">Sneha K.</span><span class="review-source">Google</span></div>
+          <a href="https://www.google.com/maps/place/Bao+To+Me/@12.9289811,77.6351677,17z/data=!4m8!3m7!1s0x3bae15780158e4c5:0x2c66aa50f5b24879!8m2!3d12.9289811!4d77.6351677!9m1!1b1!16s%2Fg%2F11rl1c6z1m" target="_blank" rel="noopener noreferrer" class="review-verify-link" aria-label="View on Google Maps">Verified on Google ↗</a>
+          <div class="review-header"><span class="review-name">Kirthi N</span><span class="review-source">Google</span></div>
           <p class="review-stars" aria-label="5 stars">★★★★★</p>
-          <p class="review-text">"Hidden gem in Koramangala! The Japanese Cheesecake and Mizu Shingen Mochi are unlike anything else in Bangalore. The ambience is so cozy and vibrant. Already planning my next visit."</p>
+          <p class="review-text">"Me and 2 of my friends were here for a chef curated tasting menu and we had a great time. All the dishes were tasty but we especially loved the chicken jhol momo, truffle cream cheese dumpling and Hainanese Chicken Rice. The desserts — Matcha Crème Brûlée and Japanese Cheesecake — were absolutely yum."</p>
         </article>
         <article class="review-card reveal">
-          <div class="review-header"><span class="review-name">Meera L.</span><span class="review-source">Google</span></div>
+          <a href="https://www.google.com/maps/place/Bao+To+Me/@12.9289811,77.6351677,17z/data=!4m8!3m7!1s0x3bae15780158e4c5:0x2c66aa50f5b24879!8m2!3d12.9289811!4d77.6351677!9m1!1b1!16s%2Fg%2F11rl1c6z1m" target="_blank" rel="noopener noreferrer" class="review-verify-link" aria-label="View on Google Maps">Verified on Google ↗</a>
+          <div class="review-header"><span class="review-name">Devesh Agarwal</span><span class="review-source">Google</span></div>
           <p class="review-stars" aria-label="5 stars">★★★★★</p>
-          <p class="review-text">"The baos here are genuinely the best I've had in Bangalore. The Black Sesame Bao for dessert is extraordinary. Service was attentive and friendly — such a warm place. Can't wait to come back with family!"</p>
-        </article>
-        <article class="review-card reveal">
-          <div class="review-header"><span class="review-name">Nisha P.</span><span class="review-source">Google</span></div>
-          <p class="review-stars" aria-label="5 stars">★★★★★</p>
-          <p class="review-text">"Came for a birthday dinner and it was perfect. The ambience transports you completely. The Char Siu Bao is rich and comforting. Every dish was beautifully presented."</p>
-        </article>
-        <article class="review-card reveal">
-          <div class="review-header"><span class="review-name">Rohit T.</span><span class="review-source">Google</span></div>
-          <p class="review-stars" aria-label="5 stars">★★★★★</p>
-          <p class="review-text">"Finally a place in Bangalore that does authentic Pan-Asian right. The Chicken &amp; Shiitake Wonton soup is pure soul food. The staff made us feel at home."</p>
-        </article>
-        <article class="review-card reveal">
-          <div class="review-header"><span class="review-name">Aditya B.</span><span class="review-source">Google</span></div>
-          <p class="review-stars" aria-label="4 stars">★★★★☆</p>
-          <p class="review-text">"Great food, great vibe. The Spiced Edamame is weirdly addictive. Slight wait on a weekend but totally worth it. Will return."</p>
+          <p class="review-text">"Fabulous outlet. Serving lovely dim sums and Asian cuisine. Each dish was just lovely. The fried crunchy garlic in oil was just out of this world. Chef Li and the service team are spot on. Absolutely worth it. Koramangala has another 'cannot miss' destination."</p>
         </article>
       </div>
       <button class="reviews-carousel-btn next" aria-label="Next reviews" onclick="scrollReviews('panel-google', 1)">&#8594;</button>
@@ -1787,45 +1794,33 @@
 
   <div class="reviews-panel" id="panel-zomato" role="tabpanel" aria-labelledby="tab-zomato">
     <div class="reviews-rating reveal">
-      <div class="rating-score">4.7</div>
+      <div class="rating-score">4.6</div>
       <div class="rating-info">
         <p class="rating-platform">Zomato Reviews</p>
-        <p class="rating-stars" aria-label="4.7 out of 5 stars">★★★★★</p>
-        <p class="rating-count">Based on 150+ reviews</p>
+        <p class="rating-stars" aria-label="4.6 out of 5 stars">★★★★★</p>
+        <p class="rating-count">Based on 62 dining reviews</p>
       </div>
     </div>
     <div class="reviews-carousel-wrap">
       <button class="reviews-carousel-btn prev" aria-label="Previous reviews" onclick="scrollReviews('panel-zomato', -1)">&#8592;</button>
       <div class="reviews-grid" id="grid-zomato">
         <article class="review-card reveal">
-          <div class="review-header"><span class="review-name">Rahul M.</span><span class="review-source">Zomato</span></div>
+          <a href="https://www.zomato.com/bangalore/bao-to-me-koramangala-1st-block-bangalore/reviews" target="_blank" rel="noopener noreferrer" class="review-verify-link" aria-label="View on Zomato">Verified on Zomato ↗</a>
+          <div class="review-header"><span class="review-name">Karan Kankani</span><span class="review-source">Zomato</span></div>
           <p class="review-stars" aria-label="5 stars">★★★★★</p>
-          <p class="review-text">"Came for lunch and ended up ordering way too much — absolutely no regrets! The Tori Katsu Curry Rice and Gyozas are a must. The staff are warm and attentive. This place deserves all the hype."</p>
+          <p class="review-text">"The jhol momos, wontons, and noodles were my absolute favourites — full of flavour and very comforting. Everything tasted fresh and well made. The place is small and calm with a minimal setup, and the open kitchen is a nice touch. Portions were good and the overall experience was pleasant. Would definitely visit again."</p>
         </article>
         <article class="review-card reveal">
-          <div class="review-header"><span class="review-name">Arjun P.</span><span class="review-source">Zomato</span></div>
+          <a href="https://www.zomato.com/bangalore/bao-to-me-koramangala-1st-block-bangalore/reviews" target="_blank" rel="noopener noreferrer" class="review-verify-link" aria-label="View on Zomato">Verified on Zomato ↗</a>
+          <div class="review-header"><span class="review-name">Joel Abraham Neuby</span><span class="review-source">Zomato</span></div>
           <p class="review-stars" aria-label="5 stars">★★★★★</p>
-          <p class="review-text">"Buta Kakuni + Yaki Meshi = perfect dinner combo. The space has so much character — every corner is Instagram-worthy. Perfect for dates and group dinners alike. Will be back soon!"</p>
+          <p class="review-text">"Had a great experience at Bao to Me. The food was really good, especially the chicken bao and the chef's special Hainanese chicken rice — both delicious and full of flavour. The staff was friendly, and a special mention to Ritu for being warm and attentive. The place was clean and the ambience was nice."</p>
         </article>
         <article class="review-card reveal">
-          <div class="review-header"><span class="review-name">Sneha R.</span><span class="review-source">Zomato</span></div>
+          <a href="https://www.zomato.com/bangalore/bao-to-me-koramangala-1st-block-bangalore/reviews" target="_blank" rel="noopener noreferrer" class="review-verify-link" aria-label="View on Zomato">Verified on Zomato ↗</a>
+          <div class="review-header"><span class="review-name">Trupthi Shiv</span><span class="review-source">Zomato</span></div>
           <p class="review-stars" aria-label="5 stars">★★★★★</p>
-          <p class="review-text">"Best gyozas I've had in Bangalore. The ponzu sauce is on point. Will be back every single week."</p>
-        </article>
-        <article class="review-card reveal">
-          <div class="review-header"><span class="review-name">Kavya D.</span><span class="review-source">Zomato</span></div>
-          <p class="review-stars" aria-label="5 stars">★★★★★</p>
-          <p class="review-text">"The Tori Gyozas are absolutely delicious and the dipping sauce is perfect. Love the dimsum platter format — great for sharing. 10/10 would recommend."</p>
-        </article>
-        <article class="review-card reveal">
-          <div class="review-header"><span class="review-name">Pooja L.</span><span class="review-source">Zomato</span></div>
-          <p class="review-stars" aria-label="5 stars">★★★★★</p>
-          <p class="review-text">"Went with a group of 6 and everyone was happy — that never happens! The Yaki Udon is warming and the baos are perfectly fluffy. Koramangala needed this."</p>
-        </article>
-        <article class="review-card reveal">
-          <div class="review-header"><span class="review-name">Vikram S.</span><span class="review-source">Zomato</span></div>
-          <p class="review-stars" aria-label="5 stars">★★★★★</p>
-          <p class="review-text">"Hidden gem in Koramangala. The space is gorgeous, service is warm, and the Prawn Hargao melts in your mouth."</p>
+          <p class="review-text">"Worth the visit, don't miss the desserts."</p>
         </article>
       </div>
       <button class="reviews-carousel-btn next" aria-label="Next reviews" onclick="scrollReviews('panel-zomato', 1)">&#8594;</button>
@@ -1833,8 +1828,8 @@
   </div>
 
   <div class="reviews-links reveal">
-    <a href="https://share.google/hKkmZfeZfHggzExfk" target="_blank" rel="noopener" class="btn-link-outline" aria-label="See all Google reviews (opens in new tab)">Google Reviews ↗</a>
-    <a href="https://www.zomato.com/bangalore/bao-to-me-koramangala-1st-block-bangalore/reviews" target="_blank" rel="noopener" class="btn-link-outline red" aria-label="See all Zomato reviews (opens in new tab)">Zomato Reviews ↗</a>
+    <a href="https://www.google.com/maps/place/Bao+To+Me/@12.9289811,77.6351677,17z/data=!4m8!3m7!1s0x3bae15780158e4c5:0x2c66aa50f5b24879!8m2!3d12.9289811!4d77.6351677!9m1!1b1!16s%2Fg%2F11rl1c6z1m" target="_blank" rel="noopener noreferrer" class="btn-link-outline" aria-label="See all Google reviews (opens in new tab)">Google Reviews ↗</a>
+    <a href="https://www.zomato.com/bangalore/bao-to-me-koramangala-1st-block-bangalore/reviews" target="_blank" rel="noopener noreferrer" class="btn-link-outline red" aria-label="See all Zomato reviews (opens in new tab)">Zomato Reviews ↗</a>
   </div>
 </section>
 
@@ -1847,7 +1842,7 @@
       <p>We'd love to have you at our table. Book online, WhatsApp us, or call ahead.</p>
       <div style="display:flex;align-items:stretch;gap:1rem;margin-top:1.5rem;">
         <button class="btn-primary" onclick="openReserveModal()" style="font-family:'Nunito',sans-serif;font-size:0.8rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;border:2px solid var(--red);cursor:pointer;">Book a Table</button>
-        <a href="https://wa.me/917019565453?text=Hi%20Bao%20To%20Me!%20I%27d%20like%20to%20make%20a%20reservation." class="btn-outline" style="display:inline-flex;align-items:center;gap:0.5rem;" target="_blank" rel="noopener">
+        <a href="https://wa.me/917019565453?text=Hi%20Bao%20To%20Me!%20I%27d%20like%20to%20make%20a%20reservation." class="btn-outline" style="display:inline-flex;align-items:center;gap:0.5rem;" target="_blank" rel="noopener noreferrer">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
           WhatsApp Us
         </a>
@@ -1873,12 +1868,13 @@
       <a href="tel:+917019565453" class="contact-phone">+91 70195 65453</a>
       <br>
       <h4>Follow Along</h4>
-      <a href="https://instagram.com/baotomeblr" target="_blank">@baotomeblr</a>
+      <a href="https://instagram.com/baotomeblr" target="_blank" rel="noopener noreferrer">@baotomeblr</a>
     </div>
   </div>
 </section>
 
 <!-- ══ FOOTER ══ -->
+</main>
 <footer>
   <p>© 2026 <span>Bao To Me</span> — Pan Asian Kitchen, Bangalore &nbsp;|&nbsp; <span lang="zh">包给我</span> &nbsp;|&nbsp; <span>#INCREDIBAO</span></p>
 </footer>
@@ -1903,12 +1899,12 @@
     </svg>
     <span>Space</span>
   </a>
-  <a href="#" class="mobile-nav-item mobile-nav-reserve" data-section="contact" onclick="openReserveModal(event)">
+  <button class="mobile-nav-item mobile-nav-reserve" data-section="contact" onclick="openReserveModal()">
     <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
       <rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/>
     </svg>
     <span>Reserve</span>
-  </a>
+  </button>
 </nav>
 
 <!-- ══ RESERVATION MODAL ══ -->
@@ -1925,11 +1921,12 @@
       src="https://reservations.petpooja.com/form/b6bdf34d414004bed4ed9bcb1d10f73b3d75e05fca864c948a851f88a694bc9f45d429ff95afef29ee7cbacb6552c6ef97b503fbb12ef2198cf3f76614c856fbbbe8af7f5862e65194f5b7d1e0d36705b8d8d797136267c319a7106017c94792"
       class="reserve-modal-iframe"
       title="Bao To Me Reservation Form"
-      loading="lazy">
+      loading="lazy"
+      sandbox="allow-scripts allow-forms allow-same-origin allow-popups allow-popups-to-escape-sandbox">
     </iframe>
     <div class="reserve-modal-wa">
       Prefer to WhatsApp?&nbsp;
-      <a href="https://wa.me/917019565453?text=Hi%20Bao%20To%20Me!%20I%27d%20like%20to%20make%20a%20reservation." target="_blank" rel="noopener">
+      <a href="https://wa.me/917019565453?text=Hi%20Bao%20To%20Me!%20I%27d%20like%20to%20make%20a%20reservation." target="_blank" rel="noopener noreferrer">
         <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
         Message us on WhatsApp
       </a>
