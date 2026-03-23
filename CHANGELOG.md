@@ -6,6 +6,18 @@ Format: `## [version] — YYYY-MM-DD` followed by bullet points grouped by type.
 
 ---
 
+## [1.4.0] — 2026-03-23
+
+### Added
+- Press section: replaced 3 placeholder cards + 3 "more coverage coming soon" slots with 6 real press mentions (The Hindu, Economic Times, TheStyle.World, BW Hotelier, Restaurant India, HospiBuz)
+- All press cards now link to real published articles (external links with `target="_blank"` and `rel="noopener noreferrer"`)
+- `context/press/README.txt` — new press context directory for staging press assets
+
+### Fixed
+- Google Maps embed URL updated to use business name search instead of raw coordinates for better reliability
+
+---
+
 ## [1.1.0] — 2026-03-19
 
 ### Fixed
