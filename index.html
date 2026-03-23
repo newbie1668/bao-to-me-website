@@ -1026,6 +1026,8 @@
       display: flex;
       align-items: center;
       justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 0.3rem;
     }
 
     .contact-map-label a {
@@ -2514,14 +2516,15 @@
     lb.hidden = false;
     document.body.style.overflow = 'hidden';
     updateLightbox();
-    lb.addEventListener('keydown', lightboxKeyHandler);
+    document.addEventListener('keydown', lightboxKeyHandler);
+    lb.querySelector('.lightbox-close').focus();
   }
 
   function closeLightbox() {
     const lb = document.getElementById('space-lightbox');
     lb.hidden = true;
     document.body.style.overflow = '';
-    lb.removeEventListener('keydown', lightboxKeyHandler);
+    document.removeEventListener('keydown', lightboxKeyHandler);
   }
 
   function lightboxNav(dir) {
