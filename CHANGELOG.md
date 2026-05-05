@@ -6,6 +6,19 @@ Format: `## [version] — YYYY-MM-DD` followed by bullet points grouped by type.
 
 ---
 
+## [1.5.1] — 2026-05-05
+
+### Mobile UX
+- Menu tabs: 34px → 45px tall (above Apple's 44px tap-target minimum)
+- Menu cards: 441px → 383px tall (≈2 fit per screen instead of 1.9), photo aspect 4:3 → 16:10 on mobile
+- Contact section: BOOK A TABLE + WHATSAPP US no longer wrap awkwardly; now stack as 3 full-width buttons (Book / WhatsApp / Call) — added a tappable Call CTA with the phone number
+- Address now opens Google Maps when tapped
+- Bumped tap area on small links (review "Verified on Google", press "Read the story", footer Instagram, "Open in Google Maps") to ≥42px via padding
+- Floor for tiny mobile text raised from ~9.9px to ~12.5px
+- Section vertical padding 96–128px → 64–80px on mobile (less wasted whitespace)
+
+---
+
 ## [1.5.0] — 2026-05-05
 
 ### Added
