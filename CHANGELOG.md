@@ -6,6 +6,38 @@ Format: `## [version] — YYYY-MM-DD` followed by bullet points grouped by type.
 
 ---
 
+## [1.5.0] — 2026-05-05
+
+### Added
+- Full menu photography: every menu item now has a real photo (cream/cloud-motif style for visual consistency); `context/menu/CATALOGUE/` populated with 40 dish photos
+- New "Weekend Specials" tab with 3 dishes: Hainanese Chicken Rice, Tofu Dan Dan Mian, Chicken Dan Dan Mian
+- Our Space section: redesigned with asymmetric staggered photo grid (4 photos), fade-in-from-blur reveal animation on scroll, and "Reserve a Table" CTA on the section
+- 2 new interior photos for Our Space gallery (`BAOTOME_DAY1_6624-4-2.jpg`, `BAOTOME_DAY2_7418-Edit.jpg`)
+- Proper favicon set: `favicon.png` (192px), `favicon-32.png`, and `apple-touch-icon.png` (180px) for iOS
+- Dedicated OG image at `og-image.jpg` (1200×630, 131KB) for clean social link previews
+
+### Changed
+- Removed all menu prices (priceless menu)
+- Removed Beverages tab and 7 drinks (Lemon Ice Tea + 6 kombuchas/teas) from menu
+- Removed Dessert Bao Basket
+- Removed red category section headers (e.g. "Baos (3 pcs)") to reduce visual clutter — category is already clear from the active tab
+- Marquee strip: "Kombucha" → "Dan Dan Mian" (since drinks were removed)
+
+### Fixed
+- Empty bordered cells in tabs with fewer items than columns (CSS grid `auto-fill` → `auto-fit`)
+- Menu category section headers no longer render
+
+### Performance
+- Resized 4 Our Space photos from 29.2 MB total → 643 KB (98% reduction). Photos were 5–11 MB each; now max 1400px wide at JPEG q82
+- Replaced 2.6 MB OG image (`_T3A9645.jpg`) with optimized 131 KB `og-image.jpg`
+- Replaced 71 KB favicon (with spaces in filename) with 8.3 KB optimized variants at clean root paths
+
+### Removed
+- 6 separate menu panels collapsed into category-headed panels with banner artwork (kept 6 panels but removed banners)
+- Lightbox click-to-zoom on Our Space gallery (cleaner, no longer needed)
+
+---
+
 ## [1.4.0] — 2026-03-23
 
 ### Added

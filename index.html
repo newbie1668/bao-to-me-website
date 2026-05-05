@@ -8,7 +8,9 @@
   <meta name="keywords" content="Bao To Me, Pan Asian, Bangalore, Koramangala, baozi, gyoza, dimsum, ramen, restaurant">
 
   <link rel="canonical" href="https://baotome.in">
-  <link rel="icon" type="image/png" href="context/logo/Bao To Me Logo without tagline.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32.png">
+  <link rel="icon" type="image/png" sizes="192x192" href="favicon.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <meta name="theme-color" content="#C92A37">
 
   <meta name="robots" content="index, follow">
@@ -19,7 +21,7 @@
   <meta property="og:title" content="Bao To Me — Pan Asian Kitchen, Koramangala Bangalore">
   <meta property="og:description" content="Handcrafted baozi, gyozas, and pan-Asian soul food — born from family recipes, built for Bangalore. 37, CNA Arcade, Koramangala.">
   <meta property="og:url" content="https://baotome.in">
-  <meta property="og:image" content="https://baotome.in/context/photos/_T3A9645.jpg">
+  <meta property="og:image" content="https://baotome.in/og-image.jpg">
   <meta property="og:site_name" content="Bao To Me">
 
   <!-- Twitter Card -->
@@ -27,7 +29,7 @@
   <meta name="twitter:site" content="@baotomeblr">
   <meta name="twitter:title" content="Bao To Me — Pan Asian Kitchen, Koramangala Bangalore">
   <meta name="twitter:description" content="Handcrafted baozi, gyozas, and pan-Asian soul food — born from family recipes, built for Bangalore.">
-  <meta name="twitter:image" content="https://baotome.in/context/photos/_T3A9645.jpg">
+  <meta name="twitter:image" content="https://baotome.in/og-image.jpg">
 
   <!-- Schema.org structured data -->
   <script type="application/ld+json">
@@ -38,7 +40,7 @@
     "description": "Pan Asian Kitchen in Bangalore — handcrafted baozi, gyozas, dimsum and more. Where heritage meets heart.",
     "url": "https://baotome.in",
     "menu": "https://baotome.in/#menu",
-    "image": "https://baotome.in/context/photos/_T3A9645.jpg",
+    "image": "https://baotome.in/og-image.jpg",
     "telephone": "+917019565453",
     "servesCuisine": ["Chinese", "Japanese", "Pan-Asian", "Southeast Asian"],
     "priceRange": "₹₹",
@@ -610,7 +612,7 @@
 
     .menu-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 0;
       border: 2px solid var(--black);
     }
@@ -741,9 +743,15 @@
 
     .space-layout {
       display: grid;
-      grid-template-columns: 1fr;
-      gap: 3rem;
-      align-items: start;
+      grid-template-columns: 1fr 1fr;
+      gap: 4rem;
+      align-items: center;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    @media (max-width: 900px) {
+      .space-layout { grid-template-columns: 1fr; gap: 3rem; }
     }
 
     .space-text { max-width: 640px; }
@@ -783,18 +791,35 @@
     /* ── SPACE GALLERY ── */
     .space-gallery {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 8px;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: 50px 150px 50px 150px 50px;
+      gap: 1rem;
+      max-width: 480px;
+      justify-self: end;
+      width: 100%;
     }
 
     .space-gallery-item {
-      cursor: zoom-in;
       overflow: hidden;
       position: relative;
-      aspect-ratio: 4 / 3;
       background: #1a1a1a;
-      border: 1.5px solid rgba(255,255,255,0.08);
+      border-radius: 12px;
+      box-shadow: 0 20px 40px -16px rgba(0,0,0,0.6);
+      opacity: 0;
+      filter: blur(10px);
+      transition: opacity 0.7s ease, filter 0.7s ease;
     }
+
+    .space-gallery.in-view .space-gallery-item { opacity: 1; filter: blur(0); }
+    .space-gallery.in-view .space-gallery-item:nth-child(1) { transition-delay: 0.2s; }
+    .space-gallery.in-view .space-gallery-item:nth-child(2) { transition-delay: 0.4s; }
+    .space-gallery.in-view .space-gallery-item:nth-child(3) { transition-delay: 0.6s; }
+    .space-gallery.in-view .space-gallery-item:nth-child(4) { transition-delay: 0.8s; }
+
+    .space-gallery-item:nth-child(1) { grid-column: 2 / 3; grid-row: 1 / 3; }
+    .space-gallery-item:nth-child(2) { grid-column: 1 / 2; grid-row: 2 / 4; }
+    .space-gallery-item:nth-child(3) { grid-column: 1 / 2; grid-row: 4 / 6; }
+    .space-gallery-item:nth-child(4) { grid-column: 2 / 3; grid-row: 3 / 5; }
 
     .space-gallery-item img {
       width: 100%;
@@ -804,7 +829,8 @@
       transition: transform 0.4s ease, opacity 0.3s;
     }
 
-    .space-gallery-item:hover img { transform: scale(1.06); opacity: 0.78; }
+    .space-gallery-item img { transition: transform 0.4s ease; }
+    .space-gallery-item:hover img { transform: scale(1.05); }
 
     .space-gallery-item-overlay {
       position: absolute;
@@ -1519,7 +1545,7 @@
     }
 
     @media (max-width: 600px) {
-      .space-gallery { grid-template-columns: repeat(2, 1fr); }
+      .space-gallery { grid-template-rows: 30px 130px 30px 130px 30px; gap: 0.65rem; }
       .menu-grid { grid-template-columns: 1fr; }
       .menu-cat-title { font-size: 2rem; }
       .story-callout-text { font-size: 1.6rem; }
@@ -1683,378 +1709,290 @@
     <button class="menu-tab" role="tab" aria-selected="false" aria-controls="tab-appetizers" onclick="switchTab(this,'tab-appetizers')">Appetizers</button>
     <button class="menu-tab" role="tab" aria-selected="false" aria-controls="tab-baos" onclick="switchTab(this,'tab-baos')">Baos</button>
     <button class="menu-tab" role="tab" aria-selected="false" aria-controls="tab-mains" onclick="switchTab(this,'tab-mains')">Mains</button>
+    <button class="menu-tab" role="tab" aria-selected="false" aria-controls="tab-weekend" onclick="switchTab(this,'tab-weekend')">Weekend Specials</button>
     <button class="menu-tab" role="tab" aria-selected="false" aria-controls="tab-desserts" onclick="switchTab(this,'tab-desserts')">Desserts</button>
-    <button class="menu-tab" role="tab" aria-selected="false" aria-controls="tab-drinks" onclick="switchTab(this,'tab-drinks')">Beverages</button>
   </div>
 
-  <!-- SALADS & SOUPS -->
+        <!-- SALADS & SOUPS -->
   <div id="tab-starters" class="menu-panel active" role="tabpanel">
-    <div class="menu-cat-header">
-      <h3 class="menu-cat-title">Salads &amp; Soups</h3>
-    </div>
     <div class="menu-grid">
       <div class="menu-item">
-        <div class="menu-item-photo" role="img" aria-label="Smashed Cucumber Salad — photo coming soon"><div class="menu-item-photo-ph"></div></div>
+        <div class="menu-item-photo"><img src="context/menu/CATALOGUE/smashed-cucumber-salad.png" alt="Smashed Cucumber Salad" loading="lazy"></div>
         <div class="menu-item-flags"><div class="flag flag-veg" role="img" aria-label="Vegetarian"></div></div>
         <div class="menu-item-name">Smashed Cucumber Salad</div>
         <div class="menu-item-desc">Crispy smashed cucumbers with a tangy garlic-sesame dressing, finished with fresh herbs and a hint of spice.</div>
-        <div class="menu-item-price">Rs. 335/-</div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-photo" role="img" aria-label="Surimi Stick Salad — photo coming soon"><div class="menu-item-photo-ph"></div></div>
+        <div class="menu-item-photo"><img src="context/menu/CATALOGUE/surimi-stick-salad.png" alt="Surimi Stick Salad" loading="lazy"></div>
         <div class="menu-item-flags"><div class="flag flag-nonveg" role="img" aria-label="Non-vegetarian"></div><div class="flag flag-spicy" role="img" aria-label="Spicy" style="background:var(--red);width:12px;height:14px;clip-path:polygon(50% 0%,100% 50%,75% 100%,25% 100%,0% 50%)"></div></div>
         <div class="menu-item-name">Surimi Stick Salad</div>
         <div class="menu-item-desc">A refreshing salad of tender surimi sticks, crisp cucumbers, and creamy Japanese mayo dressing, topped with sesame seeds.</div>
-        <div class="menu-item-price">Rs. 415/-</div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-photo" role="img" aria-label="Miso Soup Veg — photo coming soon"><div class="menu-item-photo-ph"></div></div>
+        <div class="menu-item-photo"><img src="context/menu/CATALOGUE/miso-soup-veg.png" alt="Miso Soup Veg" loading="lazy"></div>
         <div class="menu-item-flags"><div class="flag flag-veg" role="img" aria-label="Vegetarian"></div></div>
         <div class="menu-item-name">Miso Soup Veg</div>
         <div class="menu-item-desc">A comforting broth of fermented soybean paste, with tofu, seaweed, and scallions.</div>
-        <div class="menu-item-price">Rs. 295/-</div>
       </div>
     </div>
   </div>
 
   <!-- APPETIZERS -->
   <div id="tab-appetizers" class="menu-panel" role="tabpanel">
-    <div class="menu-cat-header">
-      <h3 class="menu-cat-title">Appetizers</h3>
-    </div>
     <div class="menu-grid">
       <div class="menu-item">
-        <div class="menu-item-photo" role="img" aria-label="Veg Wonton — photo coming soon"><div class="menu-item-photo-ph"></div></div>
+        <div class="menu-item-photo"><img src="context/menu/CATALOGUE/veg-wonton.png" alt="Veg Wonton" loading="lazy"></div>
         <div class="menu-item-flags"><div class="flag flag-veg" role="img" aria-label="Vegetarian"></div></div>
         <div class="menu-item-name">Veg Wonton</div>
         <div class="menu-item-desc">Soft vegetable wontons served in a bold, spicy soy-based broth.</div>
-        <div class="menu-item-price">Rs. 425/- <span class="extra">+ Extra Wonton (1 pc) Rs.125/-</span></div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-photo" role="img" aria-label="Truffle Cream Cheese Dimsum (4 pcs) — photo coming soon"><div class="menu-item-photo-ph"></div></div>
+        <div class="menu-item-photo"><img src="context/menu/CATALOGUE/truffle-cream-cheese-dimsum.png" alt="Truffle Cream Cheese Dimsum (4 pcs)" loading="lazy"></div>
         <div class="menu-item-flags"><div class="flag flag-veg" role="img" aria-label="Vegetarian"></div></div>
         <div class="menu-item-name">Truffle Cream Cheese Dimsum (4 pcs)</div>
         <div class="menu-item-desc">Delicate dumplings filled with rich cream cheese, medley of mushrooms and a touch of aromatic truffle oil.</div>
-        <div class="menu-item-price">Rs. 495/- <span class="extra">+ Extra Dimsum (1 pc) Rs.145/-</span></div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-photo" role="img" aria-label="Shichimi Spiced Lotus Stem Chips — photo coming soon"><div class="menu-item-photo-ph"></div></div>
+        <div class="menu-item-photo"><img src="context/menu/CATALOGUE/shichimi-lotus-stem-chips.png" alt="Shichimi Spiced Lotus Stem Chips" loading="lazy"></div>
         <div class="menu-item-flags"><div class="flag flag-veg" role="img" aria-label="Vegetarian"></div></div>
         <div class="menu-item-name">Shichimi Spiced Lotus Stem Chips</div>
         <div class="menu-item-desc">Crispy lotus stem chips seasoned with our in-house dry Shichimi spice mix. Served with Japanese mayo.</div>
-        <div class="menu-item-price">Rs. 415/-</div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-photo" role="img" aria-label="Spiced Edamame — photo coming soon"><div class="menu-item-photo-ph"></div></div>
+        <div class="menu-item-photo"><img src="context/menu/CATALOGUE/spiced-edamame.png" alt="Spiced Edamame" loading="lazy"></div>
         <div class="menu-item-flags"><div class="flag flag-veg" role="img" aria-label="Vegetarian"></div></div>
         <div class="menu-item-name">Spiced Edamame</div>
         <div class="menu-item-desc">Steamed edamame tossed in a savory blend of garlic and in-house spice mix.</div>
-        <div class="menu-item-price">Rs. 425/-</div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-photo" role="img" aria-label="Veg Jhol Momo — photo coming soon"><div class="menu-item-photo-ph"></div></div>
+        <div class="menu-item-photo"><img src="context/menu/CATALOGUE/veg-jhol-momo.png" alt="Veg Jhol Momo" loading="lazy"></div>
         <div class="menu-item-flags"><div class="flag flag-veg" role="img" aria-label="Vegetarian"></div></div>
         <div class="menu-item-name">Veg Jhol Momo</div>
         <div class="menu-item-desc">Soft, vegetable momos served in a light, gently spiced broth with comforting Himalayan flavours.</div>
-        <div class="menu-item-price">Rs. 425/- <span class="extra">+ Extra Momo (1 pc) Rs.125/-</span></div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-photo" role="img" aria-label="Chicken Jhol Momo — photo coming soon"><div class="menu-item-photo-ph"></div></div>
+        <div class="menu-item-photo"><img src="context/menu/CATALOGUE/chicken-jhol-momo.png" alt="Chicken Jhol Momo" loading="lazy"></div>
         <div class="menu-item-flags"><div class="flag flag-nonveg" role="img" aria-label="Non-vegetarian"></div></div>
         <div class="menu-item-name">Chicken Jhol Momo</div>
         <div class="menu-item-desc">Soft, juicy chicken momos served in a light, gently spiced broth with comforting Himalayan flavours.</div>
-        <div class="menu-item-price">Rs. 475/- <span class="extra">+ Extra Momo (1 pc) Rs.145/-</span></div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-photo" role="img" aria-label="Chicken &amp; Shiitake Mushroom Wonton (4 pcs) — photo coming soon"><div class="menu-item-photo-ph"></div></div>
+        <div class="menu-item-photo"><img src="context/menu/CATALOGUE/chicken-shiitake-wonton.png" alt="Chicken &amp; Shiitake Mushroom Wonton (4 pcs)" loading="lazy"></div>
         <div class="menu-item-flags"><div class="flag flag-nonveg" role="img" aria-label="Non-vegetarian"></div></div>
         <div class="menu-item-name">Chicken &amp; Shiitake Mushroom Wonton (4 pcs)</div>
         <div class="menu-item-desc">Tender minced chicken thigh and shiitake-filled wontons in a spicy soy broth.</div>
-        <div class="menu-item-price">Rs. 475/- <span class="extra">+ Extra Wonton (1 pc) Rs.145/-</span></div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-photo" role="img" aria-label="Tori Katsu Sando (1 pc) — photo coming soon"><div class="menu-item-photo-ph"></div></div>
+        <div class="menu-item-photo"><img src="context/menu/CATALOGUE/tori-katsu-sando.png" alt="Tori Katsu Sando (1 pc)" loading="lazy"></div>
         <div class="menu-item-flags"><div class="flag flag-nonveg" role="img" aria-label="Non-vegetarian"></div></div>
         <div class="menu-item-name">Tori Katsu Sando (1 pc)</div>
         <div class="menu-item-desc">Golden, breaded chicken cutlet, drizzled with savory katsu sauce, sandwiched between pillowy, soft Japanese milk bread.</div>
-        <div class="menu-item-price">Rs. 495/-</div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-photo" role="img" aria-label="Prawn Toast Mantou (2 pcs) — photo coming soon"><div class="menu-item-photo-ph"></div></div>
+        <div class="menu-item-photo"><img src="context/menu/CATALOGUE/prawn-toast-mantou.png" alt="Prawn Toast Mantou (2 pcs)" loading="lazy"></div>
         <div class="menu-item-flags"><div class="flag flag-nonveg" role="img" aria-label="Non-vegetarian"></div></div>
         <div class="menu-item-name">Prawn Toast Mantou (2 pcs)</div>
         <div class="menu-item-desc">Crispy fried mantou stuffed with savory prawn filling and encrusted with sesame seeds.</div>
-        <div class="menu-item-price">Rs. 545/-</div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-photo" role="img" aria-label="Tori Kara-Age — photo coming soon"><div class="menu-item-photo-ph"></div></div>
+        <div class="menu-item-photo"><img src="context/menu/CATALOGUE/tori-kara-age.png" alt="Tori Kara-Age" loading="lazy"></div>
         <div class="menu-item-flags"><div class="flag flag-nonveg" role="img" aria-label="Non-vegetarian"></div></div>
         <div class="menu-item-name">Tori Kara-Age</div>
         <div class="menu-item-desc">Juicy, tender, Japanese fried chicken, marinated in soy and ginger, served with ponzu sauce and Japanese mayo.</div>
-        <div class="menu-item-price">Rs. 425/-</div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-photo" role="img" aria-label="Prawn Hargao (4 pcs) — photo coming soon"><div class="menu-item-photo-ph"></div></div>
+        <div class="menu-item-photo"><img src="context/menu/CATALOGUE/prawn-hargao.png" alt="Prawn Hargao (4 pcs)" loading="lazy"></div>
         <div class="menu-item-flags"><div class="flag flag-nonveg" role="img" aria-label="Non-vegetarian"></div></div>
         <div class="menu-item-name">Prawn Hargao (4 pcs)</div>
         <div class="menu-item-desc">Delicate steamed dumplings with succulent prawn and bamboo shoot filling, wrapped in translucent cover.</div>
-        <div class="menu-item-price">Rs. 495/- <span class="extra">+ Extra Hargao (1 pc) Rs.145/-</span></div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-photo" role="img" aria-label="Tori Gyozas (4 pcs) — photo coming soon"><div class="menu-item-photo-ph"></div></div>
+        <div class="menu-item-photo"><img src="context/menu/CATALOGUE/tori-gyozas.png" alt="Tori Gyozas (4 pcs)" loading="lazy"></div>
         <div class="menu-item-flags"><div class="flag flag-nonveg" role="img" aria-label="Non-vegetarian"></div></div>
         <div class="menu-item-name">Tori Gyozas (4 pcs)</div>
         <div class="menu-item-desc">Japanese pan-seared pot sticker with minced chicken filling. Served with spicy chilli sauce and tangy ponzu sauce.</div>
-        <div class="menu-item-price">Rs. 415/- <span class="extra">+ Extra Gyoza (1 pc) Rs.120/-</span></div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-photo" role="img" aria-label="Yasai Gyozas (4 pcs) — photo coming soon"><div class="menu-item-photo-ph"></div></div>
+        <div class="menu-item-photo"><img src="context/menu/CATALOGUE/yasai-gyozas.png" alt="Yasai Gyozas (4 pcs)" loading="lazy"></div>
         <div class="menu-item-flags"><div class="flag flag-veg" role="img" aria-label="Vegetarian"></div></div>
         <div class="menu-item-name">Yasai Gyozas (4 pcs)</div>
         <div class="menu-item-desc">Japanese pan-seared pot sticker with mixed veg filling. Served with spicy chilli sauce and tangy ponzu sauce.</div>
-        <div class="menu-item-price">Rs. 375/- <span class="extra">+ Extra Gyoza (1 pc) Rs.110/-</span></div>
       </div>
     </div>
   </div>
 
   <!-- BAOS -->
   <div id="tab-baos" class="menu-panel" role="tabpanel">
-    <div class="menu-cat-header">
-      <h3 class="menu-cat-title">Baos (3 pcs)</h3>
-    </div>
     <div class="menu-grid">
       <div class="menu-item">
-        <div class="menu-item-photo" role="img" aria-label="Veg Bao — photo coming soon"><div class="menu-item-photo-ph"></div></div>
+        <div class="menu-item-photo"><img src="context/menu/CATALOGUE/veg-bao.png" alt="Veg Bao" loading="lazy"></div>
         <div class="menu-item-flags"><div class="flag flag-veg" role="img" aria-label="Vegetarian"></div></div>
         <div class="menu-item-name">Veg Bao</div>
         <div class="menu-item-desc">Medley of green leafy veggies, mushrooms, carrots, onions. Served with spicy chilli sauce and chilli oil.</div>
-        <div class="menu-item-price">Rs. 375/- <span class="extra">+ Extra Bao (1 pc) Rs.145/-</span></div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-photo" role="img" aria-label="Spicy Tofu Bao — photo coming soon"><div class="menu-item-photo-ph"></div></div>
+        <div class="menu-item-photo"><img src="context/menu/CATALOGUE/spicy-tofu-bao.png" alt="Spicy Tofu Bao" loading="lazy"></div>
         <div class="menu-item-flags"><div class="flag flag-veg" role="img" aria-label="Vegetarian"></div></div>
         <div class="menu-item-name">Spicy Tofu Bao</div>
         <div class="menu-item-desc">Aromatic chilli oil infused tofu cubes, spring onions. Served with spicy chilli sauce and chilli oil.</div>
-        <div class="menu-item-price">Rs. 415/- <span class="extra">+ Extra Bao (1 pc) Rs.160/-</span></div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-photo" role="img" aria-label="Chicken Bao — photo coming soon"><div class="menu-item-photo-ph"></div></div>
+        <div class="menu-item-photo"><img src="context/menu/CATALOGUE/chicken-bao.png" alt="Chicken Bao" loading="lazy"></div>
         <div class="menu-item-flags"><div class="flag flag-nonveg" role="img" aria-label="Non-vegetarian"></div></div>
         <div class="menu-item-name">Chicken Bao</div>
         <div class="menu-item-desc">Tender chicken thighs, onion, spring onions and sesame oil. Served with spicy chilli sauce and chilli oil.</div>
-        <div class="menu-item-price">Rs. 425/- <span class="extra">+ Extra Bao (1 pc) Rs.165/-</span></div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-photo" role="img" aria-label="Schezwan Chicken Bao — photo coming soon"><div class="menu-item-photo-ph"></div></div>
+        <div class="menu-item-photo"><img src="context/menu/CATALOGUE/schezwan-chicken-bao.png" alt="Schezwan Chicken Bao" loading="lazy"></div>
         <div class="menu-item-flags"><div class="flag flag-nonveg" role="img" aria-label="Non-vegetarian"></div></div>
         <div class="menu-item-name">Schezwan Chicken Bao</div>
         <div class="menu-item-desc">Spicy, aromatic, in-house schezwan sauce chicken. Served with spicy chilli sauce and chilli oil.</div>
-        <div class="menu-item-price">Rs. 425/- <span class="extra">+ Extra Bao (1 pc) Rs.165/-</span></div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-photo" role="img" aria-label="Char Siu Bao — photo coming soon"><div class="menu-item-photo-ph"></div></div>
+        <div class="menu-item-photo"><img src="context/menu/CATALOGUE/char-siu-bao.png" alt="Char Siu Bao" loading="lazy"></div>
         <div class="menu-item-flags"><div class="flag flag-pork" role="img" aria-label="Contains pork"></div></div>
         <div class="menu-item-name">Char Siu Bao ★</div>
         <div class="menu-item-desc">Dad's recipe cantonese style barbecue pork-belly. Served with spicy chilli sauce and chilli oil.</div>
-        <div class="menu-item-price">Rs. 495/- <span class="extra">+ Extra Bao (1 pc) Rs.190/-</span></div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-photo" role="img" aria-label="Hujiao Bing — photo coming soon"><div class="menu-item-photo-ph"></div></div>
+        <div class="menu-item-photo"><img src="context/menu/CATALOGUE/hujiao-bing.png" alt="Hujiao Bing" loading="lazy"></div>
         <div class="menu-item-flags"><div class="flag flag-pork" role="img" aria-label="Contains pork"></div></div>
         <div class="menu-item-name">Hujiao Bing</div>
         <div class="menu-item-desc">Oven roasted Taiwanese pepper pork buns. Served with spicy chilli sauce and chilli oil.</div>
-        <div class="menu-item-price">Rs. 495/- <span class="extra">+ Extra Bao (1 pc) Rs.190/-</span></div>
       </div>
     </div>
   </div>
 
   <!-- MAINS -->
   <div id="tab-mains" class="menu-panel" role="tabpanel">
-    <div class="menu-cat-header">
-      <h3 class="menu-cat-title">Main Course</h3>
-    </div>
     <div class="menu-grid">
       <div class="menu-item">
-        <div class="menu-item-photo" role="img" aria-label="Nasu Katsu Curry Rice — photo coming soon"><div class="menu-item-photo-ph"></div></div>
+        <div class="menu-item-photo"><img src="context/menu/CATALOGUE/nasu-katsu-curry-rice.png" alt="Nasu Katsu Curry Rice" loading="lazy"></div>
         <div class="menu-item-flags"><div class="flag flag-veg" role="img" aria-label="Vegetarian"></div></div>
         <div class="menu-item-name">Nasu Katsu Curry Rice</div>
         <div class="menu-item-desc">Crispy panko breaded eggplant, served with rich Japanese curry and short grain rice.</div>
-        <div class="menu-item-price">Rs. 545/- <span class="extra">+ Add Nasu Katsu Rs.195</span></div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-photo" role="img" aria-label="Yasai Yaki Udon — photo coming soon"><div class="menu-item-photo-ph"></div></div>
+        <div class="menu-item-photo"><img src="context/menu/CATALOGUE/yasai-yaki-udon.png" alt="Yasai Yaki Udon" loading="lazy"></div>
         <div class="menu-item-flags"><div class="flag flag-veg" role="img" aria-label="Vegetarian"></div></div>
         <div class="menu-item-name">Yasai Yaki Udon</div>
         <div class="menu-item-desc">Stir-fried udon noodles with a mix of fresh vegetables, tossed in a savory soy-based sauce.</div>
-        <div class="menu-item-price">Rs. 545/- <span class="extra">+ Add Egg Rs.40</span></div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-photo" role="img" aria-label="Yasai Yaki Meshi — photo coming soon"><div class="menu-item-photo-ph"></div></div>
+        <div class="menu-item-photo"><img src="context/menu/CATALOGUE/yasai-yaki-meshi.png" alt="Yasai Yaki Meshi" loading="lazy"></div>
         <div class="menu-item-flags"><div class="flag flag-veg" role="img" aria-label="Vegetarian"></div></div>
         <div class="menu-item-name">Yasai Yaki Meshi ★</div>
         <div class="menu-item-desc">Stir fried Japanese short grain rice with garlic and veggies.</div>
-        <div class="menu-item-price">Rs. 545/- <span class="extra">+ Add Egg Rs.40</span></div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-photo" role="img" aria-label="Tori Katsu Curry Rice — photo coming soon"><div class="menu-item-photo-ph"></div></div>
+        <div class="menu-item-photo"><img src="context/menu/CATALOGUE/tori-katsu-curry-rice.png" alt="Tori Katsu Curry Rice" loading="lazy"></div>
         <div class="menu-item-flags"><div class="flag flag-nonveg" role="img" aria-label="Non-vegetarian"></div></div>
         <div class="menu-item-name">Tori Katsu Curry Rice ★</div>
         <div class="menu-item-desc">Crispy panko breaded chicken thigh, served with rich Japanese curry and short grain rice.</div>
-        <div class="menu-item-price">Rs. 595/- <span class="extra">+ Add Tori Katsu Rs.245</span></div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-photo" role="img" aria-label="Tori Yaki Udon — photo coming soon"><div class="menu-item-photo-ph"></div></div>
+        <div class="menu-item-photo"><img src="context/menu/CATALOGUE/tori-yaki-udon.png" alt="Tori Yaki Udon" loading="lazy"></div>
         <div class="menu-item-flags"><div class="flag flag-nonveg" role="img" aria-label="Non-vegetarian"></div></div>
         <div class="menu-item-name">Tori Yaki Udon</div>
         <div class="menu-item-desc">Stir-fried udon noodles with tender chicken, vibrant vegetables, and a savory soy-based sauce.</div>
-        <div class="menu-item-price">Rs. 595/-</div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-photo" role="img" aria-label="Tori Yaki Meshi — photo coming soon"><div class="menu-item-photo-ph"></div></div>
+        <div class="menu-item-photo"><img src="context/menu/CATALOGUE/tori-yaki-meshi.png" alt="Tori Yaki Meshi" loading="lazy"></div>
         <div class="menu-item-flags"><div class="flag flag-nonveg" role="img" aria-label="Non-vegetarian"></div></div>
         <div class="menu-item-name">Tori Yaki Meshi</div>
         <div class="menu-item-desc">Stir fried Japanese short grain rice with tender chicken cubes, garlic and veggies.</div>
-        <div class="menu-item-price">Rs. 595/-</div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-photo" role="img" aria-label="Yasai Itame Veg — photo coming soon"><div class="menu-item-photo-ph"></div></div>
+        <div class="menu-item-photo"><img src="context/menu/CATALOGUE/yasai-itame-veg.png" alt="Yasai Itame Veg" loading="lazy"></div>
         <div class="menu-item-flags"><div class="flag flag-veg" role="img" aria-label="Vegetarian"></div></div>
         <div class="menu-item-name">Yasai Itame — Veg</div>
         <div class="menu-item-desc">Stir-fried seasonal vegetables in a savory soy garlic sauce.</div>
-        <div class="menu-item-price">Rs. 475/-</div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-photo" role="img" aria-label="Schezwan Chicken — photo coming soon"><div class="menu-item-photo-ph"></div></div>
+        <div class="menu-item-photo"><img src="context/menu/CATALOGUE/schezwan-chicken.png" alt="Schezwan Chicken" loading="lazy"></div>
         <div class="menu-item-flags"><div class="flag flag-nonveg" role="img" aria-label="Non-vegetarian"></div></div>
         <div class="menu-item-name">Schezwan Chicken</div>
         <div class="menu-item-desc">Crispy chicken tossed in a bold, spicy Szechuan sauce with a punch of garlic, ginger, and fiery chili heat.</div>
-        <div class="menu-item-price">Rs. 495/-</div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-photo" role="img" aria-label="Buta Kakuni — photo coming soon"><div class="menu-item-photo-ph"></div></div>
+        <div class="menu-item-photo"><img src="context/menu/CATALOGUE/buta-kakuni.png" alt="Buta Kakuni" loading="lazy"></div>
         <div class="menu-item-flags"><div class="flag flag-pork" role="img" aria-label="Contains pork"></div></div>
         <div class="menu-item-name">Buta Kakuni ★</div>
         <div class="menu-item-desc">Tender, braised pork belly in a savory-sweet soy sauce glaze, simmered to melt-in-your-mouth perfection.</div>
-        <div class="menu-item-price">Rs. 595/-</div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-photo" role="img" aria-label="Gohan — photo coming soon"><div class="menu-item-photo-ph"></div></div>
+        <div class="menu-item-photo"><img src="context/menu/CATALOGUE/gohan.png" alt="Gohan" loading="lazy"></div>
         <div class="menu-item-flags"><div class="flag flag-veg" role="img" aria-label="Vegetarian"></div></div>
         <div class="menu-item-name">Gohan</div>
         <div class="menu-item-desc">Steamed Japanese rice. The perfect accompaniment.</div>
-        <div class="menu-item-price">Rs. 245/-</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- WEEKEND SPECIALS -->
+  <div id="tab-weekend" class="menu-panel" role="tabpanel">
+    <div class="menu-grid">
+      <div class="menu-item">
+        <div class="menu-item-photo"><img src="context/menu/CATALOGUE/hainanese-chicken-rice.png" alt="Hainanese Chicken Rice" loading="lazy"></div>
+        <div class="menu-item-flags"><div class="flag flag-nonveg" role="img" aria-label="Non-vegetarian"></div></div>
+        <div class="menu-item-name">Hainanese Chicken Rice ★</div>
+        <div class="menu-item-desc">Tender poached chicken with fragrant chicken broth rice, served with scallion-ginger sauce, chili dip, and a side of savory soup.</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-photo"><img src="context/menu/CATALOGUE/tofu-dan-dan-mian.png" alt="Tofu Dan Dan Mian" loading="lazy"></div>
+        <div class="menu-item-flags"><div class="flag flag-veg" role="img" aria-label="Vegetarian"></div><div class="flag flag-spicy" role="img" aria-label="Spicy" style="background:var(--red);width:12px;height:14px;clip-path:polygon(50% 0%,100% 50%,75% 100%,25% 100%,0% 50%)"></div></div>
+        <div class="menu-item-name">Tofu Dan Dan Mian</div>
+        <div class="menu-item-desc">Spicy Sichuan noodles with tender tofu, chili oil, sesame paste, and garlic, topped with peanuts and scallions.</div>
+      </div>
+      <div class="menu-item">
+        <div class="menu-item-photo"><img src="context/menu/CATALOGUE/chicken-dan-dan-mian.png" alt="Chicken Dan Dan Mian" loading="lazy"></div>
+        <div class="menu-item-flags"><div class="flag flag-nonveg" role="img" aria-label="Non-vegetarian"></div><div class="flag flag-spicy" role="img" aria-label="Spicy" style="background:var(--red);width:12px;height:14px;clip-path:polygon(50% 0%,100% 50%,75% 100%,25% 100%,0% 50%)"></div></div>
+        <div class="menu-item-name">Chicken Dan Dan Mian</div>
+        <div class="menu-item-desc">Spicy Sichuan noodles with minced chicken, chili oil, sesame paste, and garlic, topped with peanuts and scallions.</div>
       </div>
     </div>
   </div>
 
   <!-- DESSERTS -->
   <div id="tab-desserts" class="menu-panel" role="tabpanel">
-    <div class="menu-cat-header">
-      <h3 class="menu-cat-title">Desserts</h3>
-    </div>
     <div class="menu-grid">
       <div class="menu-item">
-        <div class="menu-item-photo" role="img" aria-label="Dou Sha Bao — photo coming soon"><div class="menu-item-photo-ph"></div></div>
+        <div class="menu-item-photo"><img src="context/menu/CATALOGUE/dou-sha-bao.png" alt="Dou Sha Bao" loading="lazy"></div>
         <div class="menu-item-flags"><div class="flag flag-veg" role="img" aria-label="Vegetarian"></div></div>
         <div class="menu-item-name">Dou Sha Bao</div>
         <div class="menu-item-desc">Mom's recipe chinese sweet red bean bao.</div>
-        <div class="menu-item-price">Rs. 345/-</div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-photo" role="img" aria-label="Custard Bao — photo coming soon"><div class="menu-item-photo-ph"></div></div>
+        <div class="menu-item-photo"><img src="context/menu/CATALOGUE/custard-bao.png" alt="Custard Bao" loading="lazy"></div>
         <div class="menu-item-flags"><div class="flag flag-egg" role="img" aria-label="Contains egg"></div></div>
         <div class="menu-item-name">Custard Bao</div>
         <div class="menu-item-desc">Home-made thick, rich, sweet custard bao.</div>
-        <div class="menu-item-price">Rs. 345/-</div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-photo" role="img" aria-label="Black Sesame Bao — photo coming soon"><div class="menu-item-photo-ph"></div></div>
+        <div class="menu-item-photo"><img src="context/menu/CATALOGUE/black-sesame-bao.png" alt="Black Sesame Bao" loading="lazy"></div>
         <div class="menu-item-flags"><div class="flag flag-veg" role="img" aria-label="Vegetarian"></div></div>
         <div class="menu-item-name">Black Sesame Bao ★</div>
         <div class="menu-item-desc">Rich, fragrant and nutty, black sesame paste with just the right amount of sweetness.</div>
-        <div class="menu-item-price">Rs. 345/-</div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-photo" role="img" aria-label="Mizu Shingen Mochi — photo coming soon"><div class="menu-item-photo-ph"></div></div>
+        <div class="menu-item-photo"><img src="context/menu/CATALOGUE/mizu-shingen-mochi.png" alt="Mizu Shingen Mochi" loading="lazy"></div>
         <div class="menu-item-flags"><div class="flag flag-veg" role="img" aria-label="Vegetarian"></div></div>
         <div class="menu-item-name">Mizu Shingen Mochi ★</div>
         <div class="menu-item-desc">A delicate, raindrop-shaped dessert made from mineral water and agar, served with roasted soybean flour and black sugar syrup.</div>
-        <div class="menu-item-price">Rs. 375/-</div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-photo" role="img" aria-label="Japanese Cheesecake — photo coming soon"><div class="menu-item-photo-ph"></div></div>
+        <div class="menu-item-photo"><img src="context/menu/CATALOGUE/japanese-cheesecake.png" alt="Japanese Cheesecake" loading="lazy"></div>
         <div class="menu-item-flags"><div class="flag flag-egg" role="img" aria-label="Contains egg"></div></div>
         <div class="menu-item-name">Japanese Cheesecake ★</div>
         <div class="menu-item-desc">A feather-light soufflé cheesecake with delicate cream cheese notes and served with berry cream.</div>
-        <div class="menu-item-price">Rs. 375/-</div>
       </div>
       <div class="menu-item">
-        <div class="menu-item-photo" role="img" aria-label="Matcha Creme Brulee — photo coming soon"><div class="menu-item-photo-ph"></div></div>
+        <div class="menu-item-photo"><img src="context/menu/CATALOGUE/matcha-creme-brulee.png" alt="Matcha Creme Brulee" loading="lazy"></div>
         <div class="menu-item-flags"><div class="flag flag-egg" role="img" aria-label="Contains egg"></div></div>
         <div class="menu-item-name">Matcha Crème Brûlée ★</div>
         <div class="menu-item-desc">Silky matcha custard with a crisp caramelised sugar crust.</div>
-        <div class="menu-item-price">Rs. 375/-</div>
       </div>
-      <div class="menu-item">
-        <div class="menu-item-photo" role="img" aria-label="Dessert Bao Basket — photo coming soon"><div class="menu-item-photo-ph"></div></div>
-        <div class="menu-item-flags"><div class="flag flag-egg" role="img" aria-label="Contains egg"></div></div>
-        <div class="menu-item-name">Dessert Bao Basket</div>
-        <div class="menu-item-desc">A steamed basket of one each of our three house-favourite dessert baos.</div>
-        <div class="menu-item-price">Rs. 495/-</div>
-      </div>
-    </div>
-  </div>
-
-  <!-- DRINKS -->
-  <div id="tab-drinks" class="menu-panel" role="tabpanel">
-    <div class="menu-cat-header">
-      <h3 class="menu-cat-title">Beverages</h3>
-    </div>
-    <div class="menu-grid">
-      <div class="menu-item">
-        <div class="menu-item-photo" role="img" aria-label="Lemon Ice Tea — photo coming soon"><div class="menu-item-photo-ph"></div></div>
-        <div class="menu-item-name">Lemon Ice Tea</div>
-        <div class="menu-item-desc">Refreshingly cold iced tea with a tangy lemon flavour.</div>
-        <div class="menu-item-price">Rs. 295/-</div>
-      </div>
-      <div class="menu-item">
-        <div class="menu-item-photo" role="img" aria-label="Blood Orange Kombucha — photo coming soon"><div class="menu-item-photo-ph"></div></div>
-        <div class="menu-item-name">Blood Orange Kombucha</div>
-        <div class="menu-item-desc">Citrusy and bold with a hint of berry. Blood orange extract and natural fizz, packed with probiotics.</div>
-        <div class="menu-item-price">Rs. 315/-</div>
-      </div>
-      <div class="menu-item">
-        <div class="menu-item-photo" role="img" aria-label="Cola Kombucha — photo coming soon"><div class="menu-item-photo-ph"></div></div>
-        <div class="menu-item-name">Cola Kombucha</div>
-        <div class="menu-item-desc">A nostalgic twist on a classic. Cola-spiced, lightly fizzy, and brewed with gut-friendly probiotics.</div>
-        <div class="menu-item-price">Rs. 315/-</div>
-      </div>
-      <div class="menu-item">
-        <div class="menu-item-photo" role="img" aria-label="Litchi Kombucha — photo coming soon"><div class="menu-item-photo-ph"></div></div>
-        <div class="menu-item-name">Litchi Kombucha</div>
-        <div class="menu-item-desc">Bright and bubbly, this probiotic-rich tea blends delicate litchi sweetness with a crisp finish.</div>
-        <div class="menu-item-price">Rs. 315/-</div>
-      </div>
-      <div class="menu-item">
-        <div class="menu-item-photo" role="img" aria-label="Passion Fruit Kombucha — photo coming soon"><div class="menu-item-photo-ph"></div></div>
-        <div class="menu-item-name">Passion Fruit Kombucha</div>
-        <div class="menu-item-desc">Bold and fruity with a tangy twist. Made with passionfruit extract and packed with natural probiotics.</div>
-        <div class="menu-item-price">Rs. 315/-</div>
-      </div>
-      <div class="menu-item">
-        <div class="menu-item-photo" role="img" aria-label="Mango Kombucha — photo coming soon"><div class="menu-item-photo-ph"></div></div>
-        <div class="menu-item-name">Mango Kombucha</div>
-        <div class="menu-item-desc">Tropical, tangy, and lightly sparkling. Mango extract, natural fizz, and gut-friendly probiotics.</div>
-        <div class="menu-item-price">Rs. 315/-</div>
-      </div>
-      <div class="menu-item">
-        <div class="menu-item-photo" role="img" aria-label="Jasmine Tea Pot — photo coming soon"><div class="menu-item-photo-ph"></div></div>
-        <div class="menu-item-name">Jasmine Tea Pot (Serves 3–4)</div>
-        <div class="menu-item-desc">Fragrant jasmine-infused tea served hot, light, and soothing.</div>
-        <div class="menu-item-price">Rs. 350/-</div>
-      </div>
-    </div>
-    <p style="font-size:0.75rem; opacity:0.5; margin-top:1.5rem; text-align:center; font-family:'Nunito',sans-serif;">Prices are exclusive of GST. We do not levy service charge.</p>
+</div>
   </div>
 </section>
 
@@ -2065,7 +2003,7 @@
     <span>Baozi</span><span class="dot">✦</span>
     <span>Gyoza</span><span class="dot">✦</span>
     <span>Dimsum</span><span class="dot">✦</span>
-    <span>Kombucha</span><span class="dot">✦</span>
+    <span>Dan Dan Mian</span><span class="dot">✦</span>
     <span>Udon</span><span class="dot">✦</span>
     <span>Katsu Curry</span><span class="dot">✦</span>
     <span>Pan Asian</span><span class="dot">✦</span>
@@ -2075,7 +2013,7 @@
     <span>Baozi</span><span class="dot">✦</span>
     <span>Gyoza</span><span class="dot">✦</span>
     <span>Dimsum</span><span class="dot">✦</span>
-    <span>Kombucha</span><span class="dot">✦</span>
+    <span>Dan Dan Mian</span><span class="dot">✦</span>
     <span>Udon</span><span class="dot">✦</span>
     <span>Katsu Curry</span><span class="dot">✦</span>
     <span>Pan Asian</span><span class="dot">✦</span>
@@ -2093,31 +2031,20 @@
       <p>Think Southeast Asian alleyway, brought inside. Every corner is layered, lived-in, full of things to look at.</p>
       <p>Metal shutters. Lightbox signs. Vintage fans that became lamps. It's raw, a little nostalgic, and very much its own thing.</p>
       <p>A mahjong mirror, hand-painted murals, posters that made us smile: the details add up to a space that feels like somewhere you've been before, even on your first visit.</p>
+      <button class="btn-primary" onclick="openReserveModal()" style="margin-top:1.5rem;font-family:'Nunito',sans-serif;font-size:0.8rem;font-weight:800;letter-spacing:0.1em;text-transform:uppercase;border:2px solid var(--red);cursor:pointer;">Reserve a Table</button>
     </div>
-    <div class="space-gallery reveal" id="space-gallery">
-      <div class="space-gallery-item" onclick="openLightbox(0)" role="button" aria-label="View photo: Dining room">
+    <div class="space-gallery" id="space-gallery">
+      <div class="space-gallery-item">
         <img src="context/photos/_T3A9645.jpg" alt="Bao To Me dining room — teal banquette seating and mural" loading="lazy">
-        <div class="space-gallery-item-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
       </div>
-      <div class="space-gallery-item" onclick="openLightbox(1)" role="button" aria-label="View photo: Vintage fan lamps">
-        <img src="context/photos/_T3A9650.jpg" alt="Vintage fan lamps — upcycled décor with warm ambient light" loading="lazy">
-        <div class="space-gallery-item-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
+      <div class="space-gallery-item">
+        <img src="context/photos/BAOTOME_DAY2_7418-Edit.jpg" alt="Bao To Me bar area with hanging lanterns and warm light" loading="lazy">
       </div>
-      <div class="space-gallery-item" onclick="openLightbox(2)" role="button" aria-label="View photo: Interior">
+      <div class="space-gallery-item">
         <img src="context/photos/BAOTOME_DAY1_6540.JPG" alt="Bao To Me interior — warm lighting and hanging lanterns" loading="lazy">
-        <div class="space-gallery-item-overlay"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/><line x1="11" y1="8" x2="11" y2="14"/><line x1="8" y1="11" x2="14" y2="11"/></svg></div>
       </div>
-      <div class="space-gallery-item" onclick="openLightbox(3)" role="button" aria-label="Add photo: Entrance">
-        <div class="space-gallery-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>Photo coming soon</div>
-        <div class="space-gallery-item-overlay"></div>
-      </div>
-      <div class="space-gallery-item" onclick="openLightbox(4)" role="button" aria-label="Add photo: Bar area">
-        <div class="space-gallery-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>Photo coming soon</div>
-        <div class="space-gallery-item-overlay"></div>
-      </div>
-      <div class="space-gallery-item" onclick="openLightbox(5)" role="button" aria-label="Add photo: Mural">
-        <div class="space-gallery-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>Photo coming soon</div>
-        <div class="space-gallery-item-overlay"></div>
+      <div class="space-gallery-item">
+        <img src="context/photos/BAOTOME_DAY1_6624-4-2.jpg" alt="Bao To Me interior detail — layered Southeast Asian alleyway décor" loading="lazy">
       </div>
     </div>
   </div>
@@ -2507,9 +2434,24 @@
   // Space gallery lightbox
   const lightboxPhotos = [
     { src: 'context/photos/_T3A9645.jpg', caption: 'Dining Room' },
-    { src: 'context/photos/_T3A9650.jpg', caption: 'Vintage Fan Lamps' },
+    { src: 'context/photos/BAOTOME_DAY2_7418-Edit.jpg', caption: 'Bar & Lantern Detail' },
     { src: 'context/photos/BAOTOME_DAY1_6540.JPG', caption: 'Interior' },
+    { src: 'context/photos/BAOTOME_DAY1_6624-4-2.jpg', caption: 'Detail' },
   ];
+
+  // Space gallery stagger reveal
+  const galleryEl = document.getElementById('space-gallery');
+  if (galleryEl) {
+    const galleryObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          galleryEl.classList.add('in-view');
+          galleryObserver.disconnect();
+        }
+      });
+    }, { threshold: 0.15 });
+    galleryObserver.observe(galleryEl);
+  }
   let lightboxIndex = 0;
 
   function openLightbox(idx) {

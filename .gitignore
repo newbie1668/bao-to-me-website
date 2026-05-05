@@ -5,3 +5,5 @@ index-new.html
 .claude/
 .superpowers/
 docs/
+.playwright-mcp/
+qa-*.jpeg
