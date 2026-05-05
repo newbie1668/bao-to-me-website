@@ -6,6 +6,13 @@ Format: `## [version] — YYYY-MM-DD` followed by bullet points grouped by type.
 
 ---
 
+## [1.5.5] — 2026-05-05
+
+### Mobile UX
+- Menu grid: 1-column → 2-columns on mobile, with smaller card padding, square photos (1:1), and compressed name/description sizes. Roughly 2x more menu items visible per screen — significant scroll-length reduction on a long menu (41 items).
+
+---
+
 ## [1.5.4] — 2026-05-05
 
 ### Added
