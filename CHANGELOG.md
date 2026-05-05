@@ -6,6 +6,13 @@ Format: `## [version] — YYYY-MM-DD` followed by bullet points grouped by type.
 
 ---
 
+## [1.5.4] — 2026-05-05
+
+### Added
+- 5 new Google reviews (Sourabh Vidwans, Ramees, Ayman Khan, Anoushka Mazumder, Kumar Ankit) and 5 new Zomato reviews (Soorya, Mahima Girish, Revathi Kumar, Ragini Bhargava, Rachana N) — pulled from the live platforms via Playwright. Reviews link back to the place page on each platform (matching the existing pattern; per-review permalinks aren't reliably exposed by either Google or Zomato).
+
+---
+
 ## [1.5.3] — 2026-05-05
 
 ### Mobile UX
