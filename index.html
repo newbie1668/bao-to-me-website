@@ -1442,13 +1442,42 @@
     #press .section-label { color: var(--red); position: relative; }
     #press .section-heading { color: var(--cream); position: relative; margin-bottom: 3rem; }
 
-    .press-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 1.5px;
-      border: 1.5px solid rgba(255,255,255,0.08);
-      position: relative;
+    .press-carousel-wrap { position: relative; }
+    .press-carousel-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      z-index: 2;
+      background: var(--cream);
+      border: 1.5px solid rgba(255,243,227,0.5);
+      width: 44px;
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.1rem;
+      color: var(--black);
+      cursor: pointer;
+      transition: background 0.2s, border-color 0.2s;
     }
+    .press-carousel-btn:hover { background: var(--red); color: var(--white); border-color: var(--red); }
+    .press-carousel-btn.prev { left: -22px; }
+    .press-carousel-btn.next { right: -22px; }
+    @media (max-width: 600px) {
+      .press-carousel-btn.prev { left: 0; }
+      .press-carousel-btn.next { right: 0; }
+    }
+
+    .press-grid {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      padding-bottom: 0.5rem;
+      scrollbar-width: none;
+    }
+    .press-grid::-webkit-scrollbar { display: none; }
 
     .press-card {
       background: rgba(255,255,255,0.03);
@@ -1458,7 +1487,10 @@
       flex-direction: column;
       gap: 1rem;
       transition: background 0.2s;
+      flex: 0 0 300px;
+      scroll-snap-align: start;
     }
+    @media (min-width: 768px) { .press-card { flex: 0 0 340px; } }
 
     .press-card:hover { background: rgba(255,255,255,0.06); }
 
@@ -1511,14 +1543,6 @@
       text-transform: uppercase;
       text-align: center;
       padding: 1.5rem;
-    }
-
-    @media (max-width: 900px) {
-      .press-grid { grid-template-columns: 1fr 1fr; }
-    }
-
-    @media (max-width: 600px) {
-      .press-grid { grid-template-columns: 1fr; }
     }
 
     .review-verify-link {
@@ -2250,7 +2274,9 @@
 <section id="press">
   <p class="section-label reveal">In the Press</p>
   <h2 class="section-heading reveal">They're talking<br>about us.</h2>
-  <div class="press-grid">
+  <div class="press-carousel-wrap reveal">
+    <button class="press-carousel-btn prev" aria-label="Previous press mentions" onclick="scrollPress(-1)">&#8592;</button>
+    <div class="press-grid" id="press-grid">
     <div class="press-card reveal">
       <p class="press-card-pub">The Hindu</p>
       <p class="press-card-quote">"At a time when every other hole-in-the-wall operation is spouting the words 'pan Asian', Bao To Me is the real deal."</p>
@@ -2281,6 +2307,8 @@
       <p class="press-card-quote">"Bao To Me adds a soulful and bold new voice to Bengaluru's thriving food scene, one that's equal parts comfort, culture, and creativity."</p>
       <a href="https://hospibuz.com/restaurants-listicles/bao-to-me-a-flagship-restaurant-launches-in-bengaluru-serving-bold-asian-comfort-food-rooted-in-homegrown-stories-9628835" class="press-card-link" target="_blank" rel="noopener noreferrer" aria-label="Read article on HospiBuz">Read the story ↗</a>
     </div>
+    </div>
+    <button class="press-carousel-btn next" aria-label="Next press mentions" onclick="scrollPress(1)">&#8594;</button>
   </div>
 </section>
 
@@ -2462,6 +2490,16 @@
     const grid = document.querySelector('#' + panelId + ' .reviews-grid');
     if (!grid) return;
     const cardWidth = grid.querySelector('.review-card').offsetWidth + 16;
+    grid.scrollBy({ left: dir * cardWidth * 2, behavior: 'smooth' });
+  }
+
+  // Press carousel scroll
+  function scrollPress(dir) {
+    const grid = document.getElementById('press-grid');
+    if (!grid) return;
+    const card = grid.querySelector('.press-card');
+    if (!card) return;
+    const cardWidth = card.offsetWidth + 16;
     grid.scrollBy({ left: dir * cardWidth * 2, behavior: 'smooth' });
   }
 

@@ -6,6 +6,13 @@ Format: `## [version] — YYYY-MM-DD` followed by bullet points grouped by type.
 
 ---
 
+## [1.5.3] — 2026-05-05
+
+### Mobile UX
+- Press section converted from a 6-card grid (which stacked to 6 rows on mobile) into a horizontal scroll-snap carousel with prev/next buttons, mirroring the reviews carousel pattern. Big mobile scroll-length reduction since users now see one card at a time and swipe through instead of scrolling past 6 stacked cards.
+
+---
+
 ## [1.5.2] — 2026-05-05
 
 ### Spacing
