@@ -6,6 +6,16 @@ Format: `## [version] — YYYY-MM-DD` followed by bullet points grouped by type.
 
 ---
 
+## [1.5.2] — 2026-05-05
+
+### Spacing
+- Replaced fixed `7rem`/`8rem` section padding with responsive `clamp(3rem, 7vw, 5rem)` so spacing smoothly scales between breakpoints
+- Desktop section padding: 112–128px → 72–80px (industry-standard for marketing sites)
+- Mobile section padding: 64–80px → 40–56px
+- Removed v1.5.1 mobile-only padding override (clamp now handles all viewports)
+
+---
+
 ## [1.5.1] — 2026-05-05
 
 ### Mobile UX

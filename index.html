@@ -367,7 +367,7 @@
     /* ── STORY SECTION ── */
     #story {
       background: var(--cream);
-      padding: 8rem 8vw 6rem;
+      padding: clamp(3.5rem, 7vw, 5rem) 8vw clamp(2.5rem, 5vw, 4rem);
       position: relative;
     }
 
@@ -459,7 +459,7 @@
     /* ── LET'S EAT BAND ── */
     #lets-eat {
       background: var(--black);
-      padding: 7rem 8vw;
+      padding: clamp(3rem, 7vw, 5rem) 8vw;
       text-align: center;
       position: relative;
       overflow: hidden;
@@ -541,7 +541,7 @@
     /* ── MENU SECTION ── */
     #menu {
       background: var(--cream);
-      padding: 7rem 6vw;
+      padding: clamp(3rem, 7vw, 5rem) 6vw;
     }
 
     .menu-header {
@@ -723,7 +723,7 @@
     /* ── SPACE SECTION ── */
     #space {
       background: var(--black);
-      padding: 7rem 6vw;
+      padding: clamp(3rem, 7vw, 5rem) 6vw;
       position: relative;
       overflow: hidden;
     }
@@ -973,7 +973,7 @@
     /* ── CONTACT SECTION ── */
     #contact {
       background: var(--cream);
-      padding: 7rem 8vw;
+      padding: clamp(3rem, 7vw, 5rem) 8vw;
     }
 
     .contact-inner {
@@ -1269,7 +1269,7 @@
     /* ── REVIEWS SECTION ── */
     #reviews {
       background: var(--cream);
-      padding: 6rem 8vw;
+      padding: clamp(2.5rem, 6vw, 4.5rem) 8vw;
     }
     .reviews-tabs {
       display: flex;
@@ -1424,7 +1424,7 @@
     /* ── PRESS SECTION ── */
     #press {
       background: var(--black);
-      padding: 6rem 8vw;
+      padding: clamp(2.5rem, 6vw, 4.5rem) 8vw;
       position: relative;
       overflow: hidden;
     }
@@ -1553,10 +1553,6 @@
       .lets-eat-heading { font-size: 4rem; }
 
       /* ── MOBILE UX FIXES (v1.5.1) ── */
-
-      /* Tighter section padding (was 96–128px → ~64px) */
-      section { padding-top: 4rem; padding-bottom: 4rem; }
-      #story { padding-top: 5rem; padding-bottom: 4rem; }
 
       /* Tabs: 44px+ tap targets */
       .menu-tab { padding: 0.95em 1.2em; font-size: 0.82rem; }
