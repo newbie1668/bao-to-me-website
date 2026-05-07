@@ -1,0 +1,21 @@
+# robots.txt for Bao To Me — Pan Asian Kitchen, Koramangala
+# https://www.baotome.co.in
+
+User-agent: *
+Allow: /
+Disallow: /_vercel/
+
+# Welcome AI assistants and answer engines
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+Sitemap: https://www.baotome.co.in/sitemap.xml
