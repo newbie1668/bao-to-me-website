@@ -5,14 +5,14 @@ Koramangala, Bangalore.**
 
 ![Static HTML](https://img.shields.io/badge/site-static%20HTML-C92A37)
 ![Local SEO](https://img.shields.io/badge/SEO-schema.org-2ea44f)
-![Vercel](https://img.shields.io/badge/deployed%20on-Vercel-000000)
+![Live site](https://img.shields.io/badge/live-baotome.in-000000)
 ![Mobile UX](https://img.shields.io/badge/mobile-polished-8a2be2)
 
 This repo is the production source for a restaurant site: food photography,
 menu structure, reviews, press, reservation paths, local SEO, and performance
 work all in one static page.
 
-Live site: **https://bao-to-me-website.vercel.app**
+Live site: **https://baotome.in**
 
 ![Bao To Me social preview](./og-image.jpg)
 
@@ -123,8 +123,8 @@ Full history is in [`CHANGELOG.md`](./CHANGELOG.md).
 Because this is a static site, deployment is simple:
 
 1. Push to GitHub.
-2. Import the repo into Vercel.
-3. Deploy.
+2. Deploy the repository with any static host.
+3. Point the production domain at the deployed site.
 
 The production site is just the repository contents served as static assets.
 
